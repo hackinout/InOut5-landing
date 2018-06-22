@@ -1,5 +1,5 @@
-# InOut: India's leading Hackathon
-Main site of InOut 5 [WIP]
+# InOut: India's biggest community hackathon
+Landing page for InOut 5.0
 
 ## How to run:
 
