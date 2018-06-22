@@ -1,0 +1,57 @@
+.talk-bubble{
+    background-color: $blue;
+    margin: 5px;
+    display: inline-block;
+    position: relative;
+    height: auto;
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.25);
+    p{
+      font-size: 1.2em;
+      line-height: 1.6;
+      padding: 5px 10px;
+      color: $white;
+      -webkit-margin-before: 0em;
+      -webkit-margin-after: 0em;
+      font-family: $montserrat;
+      width: 100%
+    }
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 15px;
+      right: auto;
+      bottom: -8px;
+      border: 5px solid;
+      border-color: $blue $blue transparent transparent
+    }
+}
+
+
+.talk-bubble-right:after {
+  // left: auto;
+  // right: 15px;
+  // border-color: $blue transparent transparent $blue
+}
+
+.talk-wrap{
+  position: relative;
+  top: -10px;
+  margin-left: -35px;
+
+  @media (max-width: 767px) {
+    margin-left: -5px;
+  }
+}
+
+.talk-wrap-right{
+  // margin-left: 0;
+  // transform: translateX(-200px);
+  // left: 100%;
+}
+
+.talk-wrap-on-content{
+  margin-left: 10%;
+  top: 20px;
+}

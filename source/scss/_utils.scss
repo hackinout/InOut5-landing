@@ -1,0 +1,171 @@
+
+/*=============================================
+=            Utils            =
+=============================================*/
+
+.uppercase{
+  text-transform: uppercase
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+.pt-100{
+  padding-top: 100px
+}
+
+.pt-50{
+  padding-top: 50px
+}
+
+.pt-25{
+  padding-top: 25px
+}
+
+.text-block-padding{
+  padding: 10px 9%;
+}
+
+.img-wrap{
+  padding: 10px 2%
+}
+
+.vertical-align{
+  display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center
+}
+
+.schedule{
+  margin-top: 25px;
+}
+
+.table-schedule{
+  border: none;
+  font-size: 1.2em;
+
+  &>tbody>tr>td {
+    border: none
+  }
+
+  td:first-of-type{
+    border-left: 2px solid #ccc
+  }
+
+  td:last-of-type {
+    border-left: 0
+  }
+}
+
+.schedule-time{
+  width: 1em;
+  height: 1em;
+  background: $orange;
+  border-radius: 50%;
+  border: 2px solid $white;
+  position: absolute;
+  left: 2px;
+
+  &.morning{
+    background: hsla(38, 100%, 48%, 1)
+  }
+
+  &.noon{
+    background: hsla(50, 100%, 48%, 1)
+  }
+
+  &.evening{
+    background: hsla(40, 100%, 48%, 1)
+  }
+
+  &.night{
+    background: #000;
+
+    &:before{
+      content: '';
+      width: calc(1em - 8px);
+      height: calc(1em - 8px);
+      background: #fff;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.sponsors{
+  a:hover,
+  a:active,
+  {
+    border-bottom: none;
+  }
+}
+
+.logo-sponsor{
+  width: auto;
+  max-height: 220px;
+  margin: 20px;
+}
+
+.logo-sponsor-xl{
+  width: 360px;
+  max-height: 100px;
+  margin: 20px;
+}
+
+.logo-sponsor-lg{
+  width: 280px;
+  max-height: 100px;
+  margin: 20px;
+}
+
+.logo-sponsor-md{
+  width: 240px;
+  max-height: 300px;
+  margin: 20px;
+}
+
+.logo-sponsor-sm{
+  width: 180px;
+  max-height: 200px;
+  margin: 20px;
+}
+
+.logo-sponsor-xs{
+  width: 120px;
+  max-height: 160px;
+  margin: 20px;
+}
+
+@media (max-width: 424px) {
+  .sponsors > .vertical-align{
+    flex-direction: column
+  }
+  .logo-sponsor-lg{
+    max-width: 250px;
+  }
+  .logo-sponsor-md{
+    max-width: 220px;
+  }
+  .logo-sponsor-sm{
+    max-width: 200px;
+  }
+  
+  .logo-sponsor-xs{
+    max-width: 150px;
+  }
+}
+/*=====  End of Utils  ======*/
+

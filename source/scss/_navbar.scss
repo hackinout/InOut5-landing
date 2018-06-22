@@ -1,0 +1,110 @@
+
+/*=============================================
+=            Navabar            =
+=============================================*/
+
+nav{
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-family: $montserrat;
+  background-color: $white;
+
+  @media (max-width: 767px) {
+      padding-top: 0;
+      padding-bottom: 0
+    }
+}
+
+.navbar-nav{
+  .active{
+    background-color: $blue;
+    border-radius: 20px;
+
+    a{
+      color: $white;
+
+      &::before{
+        content: '( '
+      }
+
+      &::after{
+        content: ' )'
+      }
+    }
+  }
+}
+
+.navbar-nav>li>a{
+  margin: 0 3px;
+  padding: 5px 10px;
+  font-size: 0.875em;
+  transition: all .1s;
+  color: $teal;
+  
+  &::before{
+    content: '( ';
+    opacity: 0;
+  }
+
+  &::after{
+    content: ' )';
+    opacity: 0;
+  }
+
+  &:focus,
+  &:active{
+    background: $white
+  }
+  &:hover{
+    background-color: $blue;
+    border-radius: 20px;
+    color: $white;
+    border-bottom: 0;
+    transition: background-color .3s, color .3s;
+
+    &::before{
+      opacity: 1;
+    }
+
+    &::after{
+      opacity: 1;
+    }
+  }
+}
+
+.navbar-toggle .icon-bar{
+  background-color: $blue;
+}
+
+.navbar-nav>li>a.btn-dashboard{
+  padding: 5px 20px;
+  font-size: 0.8em;
+  transition: all .1s;
+  background-color: $blue;
+  border-radius: 5px;
+  color: $white;
+  box-shadow: 1px 1px 1px 1px #ccc;
+  
+  &::before{
+    content: '';
+    opacity: 0;
+  }
+
+  &::after{
+    content: '';
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active{
+    background-color: darken($blue, 10%);
+    border-radius: 5px;
+    color: $white;
+    transition: all .3s ease-in-out;
+    box-shadow: 1px 1px 2px 0 #ccc;
+    border-bottom: 0
+  }
+}
+/*=====  End of Navabar  ======*/
+

@@ -1,0 +1,65 @@
+.paper{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  &:hover,
+  &:active,
+  &:focus{
+    border-bottom: 0;
+    .back{
+      transform: rotateX(0) rotateY(0);
+    }
+    .front{
+      // background-color: lighten($orange, 10%);
+      color: $white;
+
+      &:before{
+        width: 100%
+      }
+    }
+  }
+}
+
+.paper-c{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: rotateX(5deg) ;
+  transform-origin: 0;
+  perspective-origin: 0 0;
+  perspective: 1000px
+  }
+
+.front{
+  background-color: $blue;
+  transition: all 0.1s ease-out;
+
+  &:before{
+    content: '';
+    background: darken($blue, 10%);
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.1s ease-in;
+    z-index: -1
+  }
+}
+
+.back{
+  background: $black;
+  transform: rotateX(5deg) rotateY(20deg);
+  transition: all 0.1s ease-in;
+  border: 1px solid $black;
+}
+
+.reverse{
+  transform-origin: right;
+  perspective-origin: right;
+  transform: rotateX(-5deg) rotateY(20deg)
+}
+.transparent{
+  visibility: hidden;
+}

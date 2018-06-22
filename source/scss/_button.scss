@@ -1,0 +1,38 @@
+
+/*=============================================
+=            Buttons            =
+=============================================*/
+
+.paper-b{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 145px 12px 0;
+    border-color: transparent #000000 transparent transparent;
+    position: absolute;
+    top: 113%;
+    right: 51%;
+    transform: translateX(50%);
+    z-index: -1;
+  }
+
+.btn{
+  font-family: $montserrat;
+  font-size: 1.4em;
+  color: $white;
+  border-radius: 0 !important;
+}
+
+.btn-lg{
+  padding: 15px 40px;
+  border-radius: 0 !important;
+  
+}
+
+.btn-sm{
+  padding: 5px 10px;
+  font-size: 1em
+}
+
+/*=====  End of Buttons  ======*/
+
