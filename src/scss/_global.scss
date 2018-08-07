@@ -1,5 +1,6 @@
 body {
-  @include body-font;
+  @include font-primary;
+  font-size: $font-size-base;
 }
 
 h1,
@@ -8,7 +9,7 @@ h3,
 h4,
 h5,
 h6 {
-  @include body-font;
+  @include font-primary;
   font-weight: 700;
 }
 
@@ -16,6 +17,6 @@ section {
   padding: 128px 0;
 
   &:nth-child(even) {
-    background-color: $gray-100;
+    background-color: gray;
   }
 }
