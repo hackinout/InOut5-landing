@@ -20,3 +20,20 @@ section {
     background-color: gray;
   }
 }
+
+.btn-primary {
+  background-color: $green;
+  border-color: $green;
+
+  &:hover {
+    background-color: $green-dark;
+    border-color: $green-dark;
+  }
+
+  &.btn-lg {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
