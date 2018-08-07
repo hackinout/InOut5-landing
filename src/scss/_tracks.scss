@@ -9,7 +9,7 @@
       @include flex-center;
       flex-direction: column;
       padding: 2rem;
-      transition: 0.2s ease-in transform;
+      transition: 0.15s ease-in all;
 
       &:nth-child(even) {
         background-color: $white;
