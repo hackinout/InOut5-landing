@@ -14,13 +14,8 @@ h6 {
 }
 
 section {
-  padding: 128px 0;
-
-  &:nth-child(even) {
-    background-color: gray;
-  }
+  padding: 129px 0;
 }
-
 .btn-primary {
   background-color: $green;
   border-color: $green;
@@ -36,4 +31,8 @@ section {
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+}
+
+h2 {
+  font-size: 48px;
 }

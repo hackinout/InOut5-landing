@@ -1,7 +1,12 @@
 header {
+  background-color: #fffaee;
+  margin-bottom: -40px;
+  padding-bottom: 96px;
+
   .header-text {
     .title {
       color: $indigo;
+      font-size: $font-size-large;
     }
 
     .subtitle {

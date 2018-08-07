@@ -1,7 +1,9 @@
 .navbar {
-  background-color: $black;
   height: 80px;
+  background-color: $white;
   transition: 0.2s ease-in all;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 
   .brand-title {
     font-size: 18px;
@@ -18,13 +20,29 @@
   }
 
   .nav-item {
-    text-transform: uppercase;
     margin: 0 8px;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: #e6d2e7;
+    }
+
+    .nav-link {
+      color: $purple;
+      font-weight: bold;
+      font-size: $font-size-small;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $indigo;
+      }
+    }
   }
 
   @media (min-width: 992px) {
     &.navbar-shrink {
-      height: 48px;
+      height: 80px;
     }
   }
 
@@ -34,15 +52,5 @@
       border-radius: 2px;
       background-color: $black;
     }
-  }
-
-  .github-link {
-    img {
-      height: 24px;
-      margin-right: 8px;
-    }
-
-    color: white;
-    text-transform: none;
   }
 }
