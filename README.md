@@ -1,9 +1,17 @@
-# InOut: India's biggest community hackathon
-Landing page for InOut 5.0
+# devfolio-landing-page-starter
 
-## How to run:
+Kickstart landing page development with this starter which includes SASS preprocessing, image optimization, minification and hot reloading with BrowserSync.
 
-1. Clone the repo.
-2. Run `yarn`.
-3. Run `yarn start` to watch.
-4. Run `yarn build` to build locally. Check `public` directory for the files.
+## Installation
+
+Install the dependencies:
+
+### `yarn install`
+
+Run the development server:
+
+### `yarn dev`
+
+Production build to `/public`:
+
+### `yarn build`

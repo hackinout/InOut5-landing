@@ -1,139 +1,127 @@
-'use strtict'
-var gulp = require('gulp')
-var browserSync = require('browser-sync').create()
-var reload = browserSync.reload
-var concat = require('gulp-concat')
-var minify = require('gulp-minify')
-var cleanCss = require('gulp-clean-css')
-var rename = require('gulp-rename')
-var postcss = require('gulp-postcss')
-var autoprefixer = require('autoprefixer')
-var htmlmin = require('gulp-htmlmin')
-var del = require('del')
-var uncss = require('gulp-uncss')
-var uglify = require('gulp-uglify')
-var pump = require('pump')
-var sass = require('gulp-sass')
-var svgSprite = require('gulp-svg-sprite')
-// Default Gulp task to run including all necessary dependencies
-gulp.task('default', ['browser-sync', 'build'], function () {
-  gulp.watch(['source/**/*.html', 'source/js/*.js',
-    'source/scss/**/*.scss'
-  ], ['build'])
-  gulp.watch(['public/**/*.html', 'public/js/*.js',
-    'public/css/*.css'
-  ], reload)
-})
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var cleanCSS = require('gulp-clean-css');
+var autoprefixer = require('gulp-autoprefixer');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var htmlmin = require('gulp-htmlmin');
+var browserSync = require('browser-sync').create();
 
-gulp.task('browser-sync', function () {
-  browserSync.init({
-    server: './public'
-  })
-})
+// plugin for lossy jpg compression
+var imageminMozjpeg = require('imagemin-mozjpeg');
 
-// Build task to initiate minify tasks for CSS and JS
-gulp.task('build', ['copy-favicons', 'minify-html', 'pack-minify-js', 'sass', 'gulp-uncss', 'copy-img', 'copy-css', 'copy-pages'
-])
-
-// Task to minify HTML
-gulp.task('minify-html', function () {
-  return gulp.src(['source/*.html', 'source/*/*.html'])
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('public/'))
-})
-
-// Task to uglify JS
-gulp.task('pack-minify-js', function (cb) {
-  pump([
-    gulp.src(['source/js/*.js', '!source/js/*.min.js'])
-      .pipe(minify({
-        ext: {
-          min: '.min.js'
-        },
-        noSource: true
-      })),
-    uglify(),
-    gulp.dest('./public/js')
-  ],
-    cb
-  )
-})
-
-// sass
-gulp.task('sass', function () {
-  var plugins = [
-    autoprefixer({ browsers: ['last 1 version'] })
-  ]
-  return gulp.src('./source/scss/**/*.scss')
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(postcss(plugins))
+// Compile SCSS
+gulp.task('css:compile', function() {
+  return gulp
+    .src('./src/scss/**/*.scss')
+    .pipe(
+      sass
+        .sync({
+          outputStyle: 'expanded',
+        })
+        .on('error', sass.logError)
+    )
+    .pipe(
+      autoprefixer({
+        browsers: ['last 4 versions'],
+      })
+    )
+    .pipe(cleanCSS())
+    .pipe(
+      rename({
+        suffix: '.min',
+      })
+    )
     .pipe(gulp.dest('./public/css'))
-})
+    .pipe(browserSync.stream());
+});
 
-// gulp.task('sass:watch', function () {
-//   gulp.watch('.source/scss/**/*.scss', ['sass'])
-// })
+// CSS
+gulp.task('css', ['css:compile']);
 
-// Task to minify CSS
-// gulp.task('pack-minify-css', function () {
-//   return gulp.src(['source/css/*.css', '!source/css/*.min.css'])
-//     .pipe(concat('main.css'))
-//     .pipe(cleanCss())
-//     .pipe(rename({
-//       suffix: '.min'
-//     }))
-//     .pipe(gulp.dest('public/css'))
-// })
+// Minify JavaScript
+gulp.task('js:minify', function() {
+  return gulp
+    .src(['./src/js/*.js', '!./src/js/*.min.js'])
+    .pipe(uglify())
+    .pipe(
+      rename({
+        suffix: '.min',
+      })
+    )
+    .pipe(gulp.dest('./public/js'))
+    .pipe(browserSync.stream());
+});
 
-// Task to remove unused css
-gulp.task('gulp-uncss', function () {
-  return gulp.src('./css/bootstrap-custom.css')
-    .pipe(uncss({
-      html: ['index.html'],
-      ignore: [/\modal/]
-    }))
-    .pipe(gulp.dest('public/css'))
-})
+// JS
+gulp.task('js', ['js:minify']);
 
-// Task to copy assets
-gulp.task('copy-img', function () {
-  return gulp.src('source/assets/img/**/*')
-    .pipe(gulp.dest('public/assets/img'))
-})
+// Task to copy files and assets
 
-gulp.task('copy-pages', function () {
-  return gulp.src(['source/*/*.html', 'source/*/*.min.css', 'source/*/*.min.js'])
-    .pipe(gulp.dest('public/'))
-})
+// Optimize images
+gulp.task('copy:images', function() {
+  return gulp
+    .src('./src/img/**/*')
+    .pipe(
+      imagemin([
+        imageminMozjpeg({
+          quality: 90,
+        }),
+        imagemin.gifsicle(),
+        imagemin.optipng(),
+        imagemin.svgo(),
+      ])
+    )
+    .pipe(gulp.dest('./public/img'));
+});
 
-// Task to copy faviocons
-gulp.task('copy-favicons', function () {
-  return gulp.src(['source/*.png', 'source/*.ico', 'source/*.xml', 'source/*.json', '!source/index.html'])
-    .pipe(gulp.dest('public/'))
-})
+gulp.task('copy:favicons', function() {
+  return gulp
+    .src('./src/favicons/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./public/favicons'));
+});
 
-gulp.task('copy-css', function () {
-  return gulp.src('source/css/*.min.css')
-    .pipe(gulp.dest('public/css'))
-})
+gulp.task('copy:files', function() {
+  return gulp
+    .src([
+      './src/*.*',
+      './src/*/*.min.css',
+      './src/*/*.min.js',
+      '!./src/**/*.html',
+    ])
+    .pipe(gulp.dest('./public/'));
+});
 
-// Task to delete target assets folder for recreation
-gulp.task('clean', function () {
-  return del(['public/**', '!public'])
-})
+// Files
+gulp.task('copy', ['copy:images', 'copy:favicons', 'copy:files']);
 
-var config = {
-  mode: {
-    css: {
-      render: {
-        css: true
-      }
-    }
-  }
-}
+gulp.task('html:minify', function() {
+  return gulp
+    .src('./src/**/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('./public/'))
+    .pipe(browserSync.stream());
+});
 
-gulp.task('svgSprite', function () {
-  return gulp.src('source/assets/img/icons/*.svg')
-    .pipe(svgSprite(config))
-    .pipe(gulp.dest('public/css'))
-})
+gulp.task('html', ['html:minify']);
+
+// Configure the browserSync task
+gulp.task('browserSync', ['build'], function() {
+  browserSync.init({
+    server: {
+      baseDir: './public',
+    },
+  });
+});
+
+// Build task
+gulp.task('build', ['css', 'js', 'copy', 'html']);
+
+// Dev task
+gulp.task('default', ['build', 'browserSync'], function() {
+  gulp.watch('./src/scss/*.scss', ['css']);
+  gulp.watch('./src/js/*.js', ['js']);
+  gulp.watch('./src/**/*.html', ['html']);
+});
