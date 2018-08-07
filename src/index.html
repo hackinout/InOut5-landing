@@ -58,7 +58,7 @@
 <body>
 
   <header id="header">
-    <img src="img/header-bg.png" alt="InOut Background" class="img-fluid" />
+    <img src="img/bg-header.png" alt="InOut Background" class="img-fluid" />
     <div class="d-flex justify-content-center flex-column flex-md-row align-items-center pt-5">
       <div class="header-text mx-md-5">
         <div class="subtitle">Fifth Edition</div>
@@ -127,7 +127,7 @@
   <section id="tracks">
     <div class="container">
       <div class="row">
-        <div class="mx-auto text-center text-white">
+        <div class="col-lg-10 mx-auto text-center text-white">
           <h1>AMAZING TRACKS</h1>
           <p class="mt-3">
             Hack on any of these tracks to learn amazing new technology
@@ -200,7 +200,7 @@
   <section id="sponsors">
     <div class="container">
       <div class="row">
-        <div class="mx-auto text-center">
+        <div class="col-lg-10 mx-auto text-center">
           <h1>SPONSORS</h1>
           <p class="mt-3">
             Interested in becoming a sponsor? Reach out to us at
@@ -225,21 +225,55 @@
     </div>
   </section>
 
-  <section id="faqs">
+  <!-- FAQs -->
+  <section id="faq">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2 class="section-heading">Another Section</h2>
-          <p class="text-faded mt-3">
-            Lorem ipsum dolor sit amet, postea singulis duo id, at duo atqui dicant. Ne bonorum tacimates convenire mea. Has eius dicat
-            ex, dicunt persius inimicus est cu, eius omittantur ut mel. Ex dictas verterem dissentiunt eum, pro sanctus corrumpit
-            no, mei cu nihil volumus disputationi. Placerat facilisi eos ea, fugit labitur in ius, quis graeci suavitate
-            sea ex. Sea an diceret labores dissentiunt, summo aeque sea at.
+        <div class="col-lg-10 mx-auto text-center">
+          <h1>FAQ</h1>
+          <p class="mt-3">
+            At InOut, we strive to bring together developers to participate in the hackathon irrespective of gender, race, sexual orientation,
+            socioeconomic background or ethnicity. We usually try to keep things simple. Read our FAQs to phase out ambiguity.
           </p>
-          <p>
-            Mazim sensibus est ei, congue feugiat ei vel. Eam lorem ridens eu, scripta voluptatibus at eum. Id legimus accusata mel,
-            ei mei vidit legendos persecuti, adhuc praesent no nam. Duis insolens at quo.
-          </p>
+        </div>
+      </div>
+      <div class="row mt-5" id="accordion">
+        <div class="col-lg-6 col-12">
+
+          <div class="card my-3">
+            <div class="card-header btn collapsed d-flex align-items-center" id="faqOne" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="faqOne" data-parent="#accordion">
+              <div class="card-body pt-2">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+
+          <div class="card my-3">
+            <div class="card-header btn" id="faqOne" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+              Collapsible Group Item #2
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="faqTwo" data-parent="#accordion">
+              <div class="card-body pt-0">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
