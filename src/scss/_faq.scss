@@ -1,6 +1,19 @@
 #faq {
   background-color: $pink-light;
 
+  a {
+    color: $indigo;
+    font-weight: bold;
+  }
+
+  .contact-links {
+    font-size: $font-size-small;
+
+    a {
+      margin: 0 1rem;
+    }
+  }
+
   #accordion {
     .card {
       border: 2px solid $yellow;
@@ -30,11 +43,6 @@
     .card-body {
       color: $brown;
       font-size: $font-size-small;
-
-      a {
-        color: $indigo;
-        font-weight: bold;
-      }
     }
   }
 }
