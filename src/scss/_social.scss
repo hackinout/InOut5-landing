@@ -1,0 +1,45 @@
+#social {
+  background-color: $pink-light;
+
+  .social-links {
+    background-color: #9033ca;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .social-link {
+      &:nth-child(odd) {
+        background-color: #aa6cdb;
+      }
+      &:hover {
+        background-color: $green;
+        cursor: pointer;
+      }
+      @include flex-center;
+      padding: 48px 0;
+
+      .social-icon {
+        display: block;
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  .social-icon {
+    &.facebook {
+      background-image: url(../img/icon-facebook.svg);
+    }
+    &.instagram {
+      background-image: url(../img/icon-instagram.svg);
+    }
+    &.linkedin {
+      background-image: url(../img/icon-linkedin.svg);
+    }
+    &.twitter {
+      background-image: url(../img/icon-twitter.svg);
+    }
+    &.slack {
+      background-image: url(../img/icon-slack.svg);
+    }
+  }
+}

@@ -16,6 +16,7 @@ h6 {
 section {
   padding: 128px 0;
 }
+
 .btn-primary {
   background-color: $green;
   border-color: $green;
@@ -35,4 +36,8 @@ section {
 
 h2 {
   font-size: 48px;
+}
+
+.bg-pink {
+  background-color: $pink-light;
 }
