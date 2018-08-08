@@ -1,6 +1,4 @@
 #social {
-  background-color: $pink-light;
-
   .social-links {
     background-color: #9033ca;
     border-radius: 10px;
@@ -40,6 +38,27 @@
     }
     &.slack {
       background-image: url(../img/icon-slack.svg);
+    }
+  }
+}
+
+#footer {
+  background-color: $pink-light;
+  padding-bottom: 0;
+
+  .footer-container {
+    background-color: $purple;
+
+    .footer-bar {
+      font-size: $font-size-small;
+
+      div {
+        padding: 24px 0;
+      }
+
+      a {
+        color: $white;
+      }
     }
   }
 }
