@@ -40,17 +40,29 @@
     }
   }
 
-  @media (min-width: 992px) {
-    &.navbar-shrink {
-      height: 80px;
+  .navbar-toggler {
+    border: none;
+
+    &:hover {
+      background-color: #e6d2e7;
     }
   }
+
+  // @media (min-width: 992px) {
+  //   &.navbar-shrink {
+  //     height: 80px;
+  //   }
+  // }
 
   @media (max-width: 992px) {
     .navbar-nav {
       padding: 16px;
-      border-radius: 2px;
-      background-color: $black;
+      border-radius: 10px;
+      background-color: $white;
+    }
+
+    .nav-link {
+      padding-left: 16px;
     }
   }
 }
