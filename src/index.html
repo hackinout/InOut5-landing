@@ -329,6 +329,36 @@
       </div>
     </div>
 
+    <!-- test -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trackModal" data-track="ai/ml">ai</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trackModal" data-track="blockchain">blockchain</button>
+
+    <div class="modal fade" id="trackModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="d-flex">
+            <div class="modal-text">
+              <div class="modal-header">
+                <span class="modal-title">Track title</span>
+              </div>
+              <div class="modal-body">
+                Track body
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" id="nextTrack">Next track</button>
+              </div>
+            </div>
+            <div class="track-img">
+              <img src="img/track-img.png" alt="Track Image">
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div>
       <img src="img/bg-footer.png" alt="Footer Background">
       <div class="footer-container">
@@ -356,6 +386,7 @@
 
   <!-- Custom scripts -->
   <script src="js/main.min.js"></script>
+  <script src="js/track-modal.min.js"></script>
 
 </body>
 

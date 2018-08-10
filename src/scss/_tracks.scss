@@ -38,3 +38,82 @@
     }
   }
 }
+
+// Track modal styling
+#trackModal {
+  .modal-content {
+    border: none;
+    border-radius: 10px;
+
+    .close {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: -24px;
+      right: -24px;
+      background: $white;
+      border-radius: 50%;
+      font-size: 3rem;
+      font-weight: normal;
+      opacity: 1;
+      color: $indigo;
+
+      &:hover {
+        background-color: $green;
+      }
+
+      span {
+        position: relative;
+        top: -5px;
+      }
+    }
+
+    .modal-text {
+      padding: 48px;
+      flex: 1;
+    }
+
+    .modal-header {
+      border: none;
+      padding: 0;
+
+      .modal-title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #ed4331;
+      }
+    }
+
+    .modal-body {
+      padding: 16px 0;
+    }
+
+    .modal-footer {
+      border: none;
+      justify-content: flex-start;
+      padding: 32px 0 0 0;
+
+      #nextTrack {
+        border: none;
+        background: none;
+        color: $indigo;
+        font-weight: bold;
+
+        &:hover {
+          background-color: $purple-light;
+        }
+
+        &::after {
+          content: "\02C3";
+          padding: 0 8px;
+        }
+      }
+    }
+
+    .track-img {
+      max-width: 320px;
+      overflow: hidden;
+      border-radius: 0 10px 10px 0;
+    }
+  }
+}
