@@ -6,13 +6,13 @@
       id: "ai/ml",
       title: "AI/ML",
       body: "Lorem ipsum text for AI ML",
-      img: "img/src/ai"
+      img: "img/track-img.png"
     },
     {
       id: "blockchain",
       title: "Blockchain",
       body: "Lorem ipsum text for Blockchain",
-      img: "img/src/bc"
+      img: "img/track-img.png"
     }
   ];
 
@@ -30,6 +30,8 @@
     var modal = $("#trackModal");
     modal.find(".modal-title").text(track.title);
     modal.find(".modal-body").text(track.body);
+    modal.find("#trackImg").attr("src", track.img);
+    modal.find("#trackImg").attr("alt", track.title + " art");
     modal.data("id", track.id);
   }
 

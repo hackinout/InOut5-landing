@@ -7,6 +7,8 @@
 
     .track-item {
       @include flex-center;
+      background: none;
+      border-radius: 0;
       flex-direction: column;
       padding: 2rem;
       transition: 0.15s ease-in all;

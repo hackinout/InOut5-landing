@@ -135,36 +135,26 @@
         </div>
       </div>
       <div class="row track-list mt-5">
-        <div class="col-lg-4 track-item">
+        <button class="btn col-lg-4 track-item" type="button" data-toggle="modal" data-target="#trackModal" data-track="blockchain">
+          <img src="img/track-ai.png" alt="Blockchain">
+          <div class="title mt-1">Blockchain</div>
+          <div class="subtitle mt-1">Learn More</div>
+        </button>
+        <button class="btn col-lg-4 track-item" type="button" data-toggle="modal" data-target="#trackModal" data-track="ai/ml">
+          <img src="img/track-ai.png" alt="AI">
+          <div class="title mt-1">AI</div>
+          <div class="subtitle mt-1">Learn More</div>
+        </button>
+        <button class="btn col-lg-4 track-item">
           <img src="img/track-ai.png" alt="AI">
           <div class="title mt-1">Blockchain</div>
           <div class="subtitle mt-1">Learn More</div>
-        </div>
-        <div class="col-lg-4 track-item">
+        </button>
+        <button class="btn col-lg-4 track-item">
           <img src="img/track-ai.png" alt="AI">
           <div class="title mt-1">Blockchain</div>
           <div class="subtitle mt-1">Learn More</div>
-        </div>
-        <div class="col-lg-4 track-item">
-          <img src="img/track-ai.png" alt="AI">
-          <div class="title mt-1">Blockchain</div>
-          <div class="subtitle mt-1">Learn More</div>
-        </div>
-        <div class="col-lg-4 track-item">
-          <img src="img/track-ai.png" alt="AI">
-          <div class="title mt-1">Blockchain</div>
-          <div class="subtitle mt-1">Learn More</div>
-        </div>
-        <div class="col-lg-4 track-item">
-          <img src="img/track-ai.png" alt="AI">
-          <div class="title mt-1">Blockchain</div>
-          <div class="subtitle mt-1">Learn More</div>
-        </div>
-        <div class="col-lg-4 track-item">
-          <img src="img/track-ai.png" alt="AI">
-          <div class="title mt-1">Blockchain</div>
-          <div class="subtitle mt-1">Learn More</div>
-        </div>
+        </button>
       </div>
     </div>
     <div class="row">
@@ -172,6 +162,33 @@
         <p class="mt-5">
           Or any other track
         </p>
+      </div>
+    </div>
+
+    <!-- Tracks Modal -->
+    <div class="modal fade" id="trackModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="d-flex">
+            <div class="modal-text">
+              <div class="modal-header">
+                <span class="modal-title">Track title</span>
+              </div>
+              <div class="modal-body">
+                Track body
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" id="nextTrack">Next track</button>
+              </div>
+            </div>
+            <div class="track-img">
+              <img id="trackImg" src="" alt="">
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -325,36 +342,6 @@
           <a class="col-4 social-link">
             <span class="social-icon facebook"></span>
           </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- test -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trackModal" data-track="ai/ml">ai</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trackModal" data-track="blockchain">blockchain</button>
-
-    <div class="modal fade" id="trackModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="d-flex">
-            <div class="modal-text">
-              <div class="modal-header">
-                <span class="modal-title">Track title</span>
-              </div>
-              <div class="modal-body">
-                Track body
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn" id="nextTrack">Next track</button>
-              </div>
-            </div>
-            <div class="track-img">
-              <img src="img/track-img.png" alt="Track Image">
-            </div>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
         </div>
       </div>
     </div>
