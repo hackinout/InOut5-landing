@@ -11,6 +11,7 @@
       border-radius: 0;
       flex-direction: column;
       padding: 2rem;
+      font-size: $font-size-base;
       transition: 0.15s ease-in all;
 
       &:nth-child(even) {
@@ -106,7 +107,7 @@
         }
 
         &::after {
-          content: "\02C3";
+          content: "\1f862";
           padding: 0 8px;
         }
       }
