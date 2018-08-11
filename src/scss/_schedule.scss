@@ -1,0 +1,71 @@
+#scheduleTable {
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  .table {
+    display: block;
+    td,
+    th {
+      border: none;
+    }
+
+    th {
+      padding: 32px;
+      text-align: center;
+      color: $white;
+    }
+
+    td {
+      font-size: 18px;
+      padding: 20px;
+
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+
+    tr {
+      box-sizing: border-box;
+    }
+  }
+
+  .table-1 {
+    thead {
+      background-color: $purple;
+    }
+
+    tr {
+      border-left: 4px solid $purple;
+      border-bottom: 1px solid $purple;
+      border-right: 1px solid $purple;
+    }
+
+    tbody {
+      tr {
+        border-right: 1px solid transparent;
+      }
+    }
+
+    td:first-child {
+      color: $purple;
+    }
+  }
+
+  .table-2 {
+    thead {
+      background-color: $pink;
+    }
+
+    tr {
+      border-left: 4px solid $pink;
+      border-bottom: 1px solid $pink;
+      border-right: 1px solid $pink;
+    }
+
+    td:first-child {
+      color: $pink;
+    }
+  }
+}
