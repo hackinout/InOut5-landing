@@ -4,13 +4,35 @@
     border-radius: 10px;
     overflow: hidden;
 
+    .row {
+      margin: 0;
+    }
+
     .social-link {
       &:nth-child(odd) {
         background-color: #aa6cdb;
       }
+
       &:hover {
-        background-color: $green;
         cursor: pointer;
+        &.twitter {
+          background-color: #1da1f2;
+        }
+        &.facebook {
+          background-color: #4267b2;
+        }
+        &.instagram {
+          background: #d6249f;
+        }
+        &.linkedin {
+          background-color: #0077b5;
+        }
+        &.slack {
+          background-color: #4d394b;
+        }
+        &.blog {
+          background-color: $green;
+        }
       }
       @include flex-center;
       padding: 48px 0;
