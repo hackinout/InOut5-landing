@@ -4,7 +4,8 @@
   "description": "Devfolio starter for landing pages",
   "scripts": {
     "build": "gulp build",
-    "dev": "gulp"
+    "dev": "gulp",
+    "clean": "gulp clean"
   },
   "keywords": [
     "landing",
@@ -26,6 +27,7 @@
     "browser-sync": "2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean": "^0.4.0",
     "gulp-clean-css": "3.9.2",
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
