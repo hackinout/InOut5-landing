@@ -117,6 +117,23 @@ gulp.task("browserSync", ["build"], function() {
   });
 });
 
+// Clean /public
+gulp.task("clean", function() {
+  return gulp.src("public", { read: false }).pipe(clean());
+});
+
+// Dev task without copying
+gulp.task("serve", ["css", "js", "html"], function() {
+  gulp.watch("./src/scss/*.scss", ["css"]);
+  gulp.watch("./src/js/*.js", ["js"]);
+  gulp.watch("./src/**/*.html", ["html"]);
+  browserSync.init({
+    server: {
+      baseDir: "./public"
+    }
+  });
+});
+
 // Build task
 gulp.task("build", ["css", "js", "copy", "html"]);
 
@@ -125,9 +142,4 @@ gulp.task("default", ["build", "browserSync"], function() {
   gulp.watch("./src/scss/*.scss", ["css"]);
   gulp.watch("./src/js/*.js", ["js"]);
   gulp.watch("./src/**/*.html", ["html"]);
-});
-
-// Clean public
-gulp.task("clean", function() {
-  return gulp.src("public", { read: false }).pipe(clean());
 });
