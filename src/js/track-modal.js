@@ -3,15 +3,57 @@
 
   var tracks = [
     {
-      id: "ai/ml",
-      title: "AI/ML",
-      body: "Lorem ipsum text for AI ML",
-      img: "img/track-img.png"
+      id: "ai",
+      title: "Artificial Intelligence",
+      body: "Lorem ipsum text for AI",
+      img: "img/track-ai.png"
     },
     {
       id: "blockchain",
       title: "Blockchain",
       body: "Lorem ipsum text for Blockchain",
+      img: "img/track-img.png"
+    },
+    {
+      id: "iot",
+      title: "Internet of Things",
+      body: "Lorem ipsum text for IoT",
+      img: "img/track-img.png"
+    },
+    {
+      id: "algorithm",
+      title: "Algorithm",
+      body: "Lorem ipsum text for Algorithm",
+      img: "img/track-img.png"
+    },
+    {
+      id: "fintech",
+      title: "FinTech",
+      body: "Lorem ipsum text for FinTech",
+      img: "img/track-img.png"
+    },
+    {
+      id: "future-mobility",
+      title: "Future Mobility",
+      body: "Lorem ipsum text for Future",
+      img: "img/track-img.png"
+    },
+    {
+      id: "healthtech",
+      title: "HealthTech",
+      body: "Lorem ipsum text for HealthTech",
+      img: "img/track-img.png"
+    },
+    {
+      id: "ml",
+      title: "Machine Learning",
+      body: "Lorem ipsum text for ML",
+      img: "img/track-img.png"
+    },
+    {
+      id: "ar-vr",
+      title: "AR/VR",
+      body: "Lorem ipsum text for AR",
       img: "img/track-img.png"
     }
   ];
@@ -38,6 +80,7 @@
   $("#trackModal").on("show.bs.modal", function(event) {
     var button = $(event.relatedTarget); // Button that triggered the modal
     var selectedTrackId = button.data("track"); // Extract info from data-* attributes
+
     var selectedTrack = tracks.filter(function(track) {
       return track.id === selectedTrackId;
     })[0];
