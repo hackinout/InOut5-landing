@@ -25,17 +25,20 @@
     border-radius: 3px;
 
     &:hover {
-      background-color: $purple-light;
+      background-color: $blue-light;
     }
 
     .nav-link {
       font-weight: bold;
       font-size: $font-size-small;
 
-      &:hover,
-      &:focus,
-      &.active {
-        color: $indigo;
+      &.active,
+      &.focus {
+        color: $blue;
+      }
+
+      &:hover {
+        color: $blue-dark;
       }
     }
   }
@@ -44,7 +47,7 @@
     border: none;
 
     &:hover {
-      background-color: $purple-light;
+      background-color: $blue-light;
     }
   }
 

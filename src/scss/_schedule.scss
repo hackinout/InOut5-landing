@@ -41,13 +41,13 @@
 
     .table-1 {
       thead {
-        background-color: $purple;
+        background-color: $blue;
       }
 
       tr {
-        border-left: 4px solid $purple;
-        border-bottom: 1px solid $purple;
-        border-right: 1px solid $purple;
+        border-left: 4px solid $blue;
+        border-bottom: 1px solid $blue;
+        border-right: 1px solid $blue;
       }
 
       tbody {
@@ -57,7 +57,7 @@
       }
 
       td:first-child {
-        color: $purple;
+        color: $blue;
       }
     }
 

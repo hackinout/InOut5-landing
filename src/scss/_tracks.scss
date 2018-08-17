@@ -1,5 +1,5 @@
 #tracks {
-  background-color: $purple;
+  background-color: $blue;
 
   .track-list {
     background-color: $pink-light;
@@ -26,11 +26,11 @@
       }
 
       .title {
-        color: $indigo-dark;
+        color: $blue-dark;
       }
 
       .subtitle {
-        color: $indigo;
+        color: $blue;
         font-size: $font-size-small;
       }
 
@@ -61,7 +61,7 @@
       font-size: 3rem;
       font-weight: normal;
       opacity: 1;
-      color: $indigo;
+      color: $blue;
 
       &:hover {
         background-color: $green;
@@ -101,11 +101,11 @@
       #nextTrack {
         border: none;
         background: none;
-        color: $indigo;
+        color: $blue;
         font-weight: bold;
 
         &:hover {
-          background-color: $purple-light;
+          background-color: $blue-light;
         }
 
         &::after {
