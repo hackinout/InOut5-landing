@@ -26,6 +26,10 @@ section {
     border-color: $green-dark;
   }
 
+  &:active {
+    background-color: $green-dark;
+  }
+
   &.btn-lg {
     font-size: 20px;
     font-weight: bold;
