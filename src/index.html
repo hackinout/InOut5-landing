@@ -633,6 +633,22 @@
   <!-- Custom scripts -->
   <script src="js/main.min.js"></script>
   <script src="js/track-modal.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.collapse').on('show.bs.collapse', function () {
+        $(this).parent('.card').addClass('active transition');
+      });
+
+      $('.collapse').on('hide.bs.collapse', function () {
+        $(this).parent('.card').removeClass('active');
+        $(this).parent('.card').addClass('transition');
+      });
+
+      $('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
+        $(this).parent('.card').removeClass('transition');
+      });
+    });
+  </script>
 
 </body>
 

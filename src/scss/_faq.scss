@@ -22,38 +22,59 @@
     .card {
       border: 2px solid $yellow;
       border-radius: 5px;
-    }
-    .card-header {
-      text-align: left;
-      color: $red;
-      font-weight: bold;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
+      transition: 0.2s linear border;
 
-      // Bootstrap resets
-      border: none;
-      background: none;
-
-      &::before {
-        content: url("../img/icon-minus.svg");
-        padding-top: 7px;
-        margin-right: 1rem;
+      &.active {
+        border: 2px solid $blue;
       }
 
-      &.collapsed {
+      .card-header {
+        text-align: left;
+        color: $red;
+        font-weight: bold;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+
+        // Bootstrap resets
+        border: none;
+        background: none;
+
         &::before {
-          content: url("../img/icon-plus.svg");
+          content: url("../img/icon-minus.svg");
+          padding-top: 7px;
+          margin-right: 1rem;
+          transition: 0.4s ease-out all;
+        }
+
+        &.collapsed {
+          &::before {
+            content: url("../img/icon-plus.svg");
+          }
         }
       }
 
-      &:hover {
-        background-color: $yellow;
+      &.transition {
+        .card-header {
+          &::before {
+            animation: rotate 0.4s ease-out;
+          }
+        }
+      }
+
+      .card-body {
+        color: $brown;
+        font-size: $font-size-small;
       }
     }
-    .card-body {
-      color: $brown;
-      font-size: $font-size-small;
-    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
   }
 }
