@@ -3,6 +3,12 @@ header {
   margin-bottom: -40px;
   padding-bottom: 96px;
 
+  img {
+    @media (min-width: 991px) {
+      margin-bottom: -56px;
+    }
+  }
+
   .header-text {
     .title {
       color: $blue-dark;
