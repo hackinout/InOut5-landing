@@ -2,7 +2,7 @@
   background-color: $pink-light;
 
   a {
-    color: $blue-dark;
+    color: $blue;
     font-weight: bold;
   }
 
@@ -11,6 +11,10 @@
 
     a {
       margin: 0 1rem;
+
+      img {
+        margin: -4px 4px 0 0;
+      }
     }
   }
 
@@ -24,15 +28,22 @@
       color: $red;
       font-weight: bold;
       font-size: 18px;
+      display: flex;
+      align-items: center;
 
       // Bootstrap resets
       border: none;
       background: none;
 
+      &::before {
+        content: url("../img/icon-minus.svg");
+        padding-top: 7px;
+        margin-right: 1rem;
+      }
+
       &.collapsed {
         &::before {
-          content: url("../img/icon-plus.png");
-          margin-right: 1rem;
+          content: url("../img/icon-plus.svg");
         }
       }
 
