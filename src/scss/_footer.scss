@@ -1,6 +1,6 @@
 #social {
   .social-links {
-    background-color: #9033ca;
+    background-color: $blue;
     border-radius: 10px;
     overflow: hidden;
 
@@ -9,8 +9,10 @@
     }
 
     .social-link {
+      transition: 0.1s ease-in background-color;
+
       &:nth-child(odd) {
-        background-color: #aa6cdb;
+        background-color: #9f8cdb;
       }
 
       &:hover {
