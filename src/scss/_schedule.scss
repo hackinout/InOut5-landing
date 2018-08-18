@@ -30,7 +30,8 @@
         }
 
         &:last-child {
-          min-width: 360px;
+          width: 320px;
+          max-width: 320px;
         }
       }
 
@@ -74,6 +75,32 @@
 
       td:first-child {
         color: $pink;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    #scheduleTable {
+      .table-1 {
+        tr {
+          border: 1px solid $blue !important;
+        }
+      }
+
+      .table-2 {
+        tr {
+          border: 1px solid $pink !important;
+        }
+      }
+
+      .table {
+        thead {
+          border-radius: 10px 10px 0 0;
+          display: flex;
+          overflow: hidden;
+          text-align: center;
+          justify-content: center;
+        }
       }
     }
   }
