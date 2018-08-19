@@ -116,7 +116,7 @@
 
     .modal-text {
       padding: 48px;
-      flex: 1;
+      flex: 3;
     }
 
     .modal-header {
@@ -133,6 +133,10 @@
     .modal-body {
       padding: 16px 0;
       font-size: 21px;
+
+      @media (min-width: 991px) {
+        min-height: 320px;
+      }
     }
 
     .modal-footer {
@@ -158,7 +162,7 @@
     }
 
     .track-img {
-      width: 320px;
+      flex: 2;
       border-radius: 0 10px 10px 0;
       background-color: $yellow !important;
       background-size: 160px 124px !important;

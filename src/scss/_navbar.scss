@@ -27,6 +27,7 @@
       margin: 0 4px;
       padding: 0 4px;
       border-radius: 3px;
+      transition: 0.2s ease-in background-color;
 
       &:hover {
         background-color: $blue-light;
