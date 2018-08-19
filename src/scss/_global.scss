@@ -1,6 +1,7 @@
 body {
   @include font-primary;
   font-size: $font-size-base;
+  overflow-x: hidden;
 }
 
 h1,
@@ -27,7 +28,8 @@ section {
   }
 
   &:active {
-    background-color: $green-dark;
+    background-color: $green-dark !important;
+    border-color: $green-dark !important;
   }
 
   &.btn-lg {

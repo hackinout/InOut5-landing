@@ -15,6 +15,11 @@
       img {
         margin: -4px 4px 0 0;
       }
+
+      &:hover {
+        text-decoration: none;
+        color: $blue-dark;
+      }
     }
   }
 

@@ -19,6 +19,12 @@
         background-color: $white;
       }
 
+      &:focus {
+        border: none !important;
+        box-shadow: none;
+        background-color: $blue-light;
+      }
+
       .title,
       .subtitle {
         font-weight: bold;
@@ -32,6 +38,22 @@
       .subtitle {
         color: $blue;
         font-size: $font-size-small;
+
+        &::after {
+          content: "\1f862";
+          padding: 0 8px;
+          position: relative;
+          top: 1px;
+        }
+
+        @media (min-width: 992px) {
+          opacity: 0;
+          transition: 0.1s ease-in opacity;
+
+          &::after {
+            display: none;
+          }
+        }
       }
 
       &:hover {
@@ -39,6 +61,14 @@
         background-color: $green;
         transform: scale(1.1);
         z-index: 10;
+
+        .subtitle {
+          opacity: 1;
+          &::after {
+            display: inline;
+            animation: slide-in 0.1s ease-in;
+          }
+        }
       }
     }
   }
@@ -122,16 +152,27 @@
       border-radius: 0 10px 10px 0;
       background-color: $yellow !important;
       background-size: 160px 124px !important;
-      animation: slide 6s linear infinite;
+      animation: bg-slide 6s linear infinite;
     }
   }
 }
 
-@keyframes slide {
+@keyframes bg-slide {
   from {
     background-position: 0 0;
   }
   to {
-    background-position: 160px 124px;
+    background-position: 160px -124px;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    left: -16px;
+  }
+  to {
+    opacity: 1;
+    left: 0;
   }
 }
