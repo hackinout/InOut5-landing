@@ -62,6 +62,7 @@
       font-weight: normal;
       opacity: 1;
       color: $blue;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 
       &:hover {
         background-color: $green;
@@ -117,9 +118,20 @@
     }
 
     .track-img {
-      max-width: 320px;
-      overflow: hidden;
+      width: 320px;
       border-radius: 0 10px 10px 0;
+      background-color: $yellow !important;
+      background-size: 160px 124px !important;
+      animation: slide 6s linear infinite;
     }
+  }
+}
+
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 160px 124px;
   }
 }
