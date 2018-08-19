@@ -5,7 +5,7 @@
   .navbar {
     height: 80px;
     background-color: $white;
-    transition: 0.2s ease-in all;
+    transition: all 0.2s ease-in;
     border-radius: 10px;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 
@@ -27,7 +27,7 @@
       margin: 0 4px;
       padding: 0 4px;
       border-radius: 3px;
-      transition: 0.2s ease-in background-color;
+      transition: background-color 0.2s ease-in;
 
       &:hover {
         background-color: $blue-light;
