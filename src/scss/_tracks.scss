@@ -94,6 +94,16 @@
       color: $blue;
       box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 
+      @media (max-width: 768px) {
+        background-color: $green;
+      }
+
+      @media (max-width: 576px) {
+        top: 0;
+        right: 0;
+        box-shadow: none;
+      }
+
       &:hover {
         background-color: $green;
       }
