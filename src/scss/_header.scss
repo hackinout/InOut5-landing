@@ -2,9 +2,33 @@ header {
   background-color: $pink-light;
   padding-bottom: 96px;
 
-  img {
-    @media (min-width: 991px) {
-      margin-bottom: -56px;
+  .hero-image {
+    margin-bottom: -56px;
+
+    #heroImage {
+      background: url("../img/hero.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 697px;
+    }
+
+    @media (max-width: 576px) {
+      margin-bottom: -24px;
+    }
+
+    // Retina Display
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+      only screen and (min--moz-device-pixel-ratio: 1.25),
+      only screen and (-o-min-device-pixel-ratio: 1.25/1),
+      only screen and (min-device-pixel-ratio: 1.25),
+      only screen and (min-resolution: 200dpi),
+      only screen and (min-resolution: 1.25dppx) {
+      margin-bottom: -112px;
+      #heroImage {
+        background: url("../img/hero@2x.png");
+        height: 1541px;
+      }
     }
   }
 
