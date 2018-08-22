@@ -32,8 +32,8 @@
         &.slack {
           background-color: #4d394b;
         }
-        &.blog {
-          background-color: $green;
+        &.medium {
+          background-color: $black;
         }
       }
       @include flex-center;
@@ -62,6 +62,9 @@
     }
     &.slack {
       background-image: url(../img/icon-slack.svg);
+    }
+    &.medium {
+      background-image: url(../img/icon-medium.svg);
     }
   }
 }
