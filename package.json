@@ -5,6 +5,7 @@
   "scripts": {
     "build": "gulp build",
     "dev": "gulp",
+    "serve": "gulp serve",
     "clean": "gulp clean"
   },
   "keywords": [
