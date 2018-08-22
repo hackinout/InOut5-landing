@@ -17,6 +17,10 @@ header {
       margin-bottom: -24px;
     }
 
+    @media (min-width: 992px) {
+      margin-bottom: -72px;
+    }
+
     // Retina Display
     @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
       only screen and (min--moz-device-pixel-ratio: 1.25),
