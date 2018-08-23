@@ -62,7 +62,15 @@
       &.transition {
         .card-header {
           &::before {
-            animation: rotate 0.4s ease-out;
+            animation: rotate 0.8s ease-out;
+          }
+        }
+
+        &.active {
+          .card-header {
+            &::before {
+              animation: rotate 0.4s ease-out;
+            }
           }
         }
       }
