@@ -1,39 +1,9 @@
 header {
-  background-color: $pink-light;
+  background-color: #fffbf3;
   padding-bottom: 96px;
 
   .hero-image {
     margin-bottom: -56px;
-
-    #heroImage {
-      background: url("../img/hero.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 100%;
-      height: 697px;
-    }
-
-    @media (max-width: 576px) {
-      margin-bottom: -24px;
-    }
-
-    @media (min-width: 992px) {
-      margin-bottom: -72px;
-    }
-
-    // Retina Display
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
-      only screen and (min--moz-device-pixel-ratio: 1.25),
-      only screen and (-o-min-device-pixel-ratio: 1.25/1),
-      only screen and (min-device-pixel-ratio: 1.25),
-      only screen and (min-resolution: 200dpi),
-      only screen and (min-resolution: 1.25dppx) {
-      margin-bottom: -112px;
-      #heroImage {
-        background: url("../img/hero@2x.png");
-        height: 1541px;
-      }
-    }
   }
 
   .header-text {
@@ -47,6 +17,67 @@ header {
       font-weight: bold;
       letter-spacing: 5px;
       text-transform: uppercase;
+    }
+  }
+
+  #heroImage {
+    position: relative;
+
+    .art-item {
+      position: absolute;
+      height: auto;
+
+      &.circle {
+        width: 4.5%;
+      }
+
+      &.box {
+        width: 6.5%;
+      }
+
+      &.car {
+        width: 11%;
+      }
+    }
+
+    #c1 {
+      top: 15%;
+      left: 8%;
+    }
+
+    #c2 {
+      top: 30%;
+      left: 14%;
+    }
+
+    #c3 {
+      top: 4%;
+      left: 18%;
+    }
+
+    #c4 {
+      top: 21%;
+      left: 70%;
+    }
+
+    #b1 {
+      top: 54%;
+      left: 24.5%;
+    }
+
+    #b2 {
+      top: 29%;
+      left: 77%;
+    }
+
+    #car1 {
+      top: 38%;
+      left: 3%;
+    }
+
+    #car2 {
+      top: 32%;
+      left: 89%;
     }
   }
 }
