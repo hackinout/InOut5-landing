@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Devfolio starter for landing pages",
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp clean && gulp build",
     "dev": "gulp",
     "serve": "gulp serve",
     "clean": "gulp clean"
