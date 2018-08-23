@@ -31,8 +31,7 @@
 
   // Activate scrollspy to add active class to navbar items on scroll
   $("body").scrollspy({
-    target: "#mainNav",
-    offset: 56
+    target: "#mainNav"
   });
 
   // Header scroll animations
