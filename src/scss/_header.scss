@@ -23,6 +23,10 @@ header {
   #heroImage {
     position: relative;
 
+    .background {
+      width: 100%;
+    }
+
     .art-item {
       position: absolute;
       height: auto;
@@ -66,8 +70,8 @@ header {
     }
 
     #b2 {
-      top: 29%;
-      left: 77%;
+      top: 26%;
+      left: 81%;
     }
 
     #car1 {
