@@ -1,6 +1,6 @@
-# devfolio-landing-page-starter
+# InOut: India's biggest community hackathon
 
-Kickstart landing page development with this starter which includes SASS preprocessing, image optimization, minification and hot reloading with BrowserSync.
+Website for InOut 5.0
 
 ## Installation
 
