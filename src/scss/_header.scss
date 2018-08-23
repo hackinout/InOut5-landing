@@ -33,55 +33,55 @@ header {
 
       &.circle {
         width: 4.5%;
+
+        &.c1 {
+          top: 15%;
+          left: 8%;
+        }
+    
+        &.c2 {
+          top: 30%;
+          left: 14%;
+        }
+    
+        &.c3 {
+          top: 4%;
+          left: 18%;
+        }
+    
+        &.c4 {
+          top: 21%;
+          left: 70%;
+        }
       }
 
       &.box {
         width: 6.5%;
+
+        &.b1 {
+          top: 54%;
+          left: 24.5%;
+        }
+    
+        &.b2 {
+          top: 26%;
+          left: 81%;
+        }
       }
 
-      &.car {
+      &.vehicle {
         width: 11%;
+
+        &.v1 {
+          top: 38%;
+          left: 3%;
+        }
+    
+        &.v2 {
+          top: 32%;
+          left: 89%;
+        }
       }
-    }
-
-    #c1 {
-      top: 15%;
-      left: 8%;
-    }
-
-    #c2 {
-      top: 30%;
-      left: 14%;
-    }
-
-    #c3 {
-      top: 4%;
-      left: 18%;
-    }
-
-    #c4 {
-      top: 21%;
-      left: 70%;
-    }
-
-    #b1 {
-      top: 54%;
-      left: 24.5%;
-    }
-
-    #b2 {
-      top: 26%;
-      left: 81%;
-    }
-
-    #car1 {
-      top: 38%;
-      left: 3%;
-    }
-
-    #car2 {
-      top: 32%;
-      left: 89%;
     }
   }
 }
