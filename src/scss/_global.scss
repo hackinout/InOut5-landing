@@ -48,3 +48,11 @@ h2 {
   background-color: $pink-light;
   padding: 64px 0;
 }
+
+#codeOfConduct {
+  background-color: $pink-light;
+
+  .section-heading {
+    color: $red;
+  }
+}

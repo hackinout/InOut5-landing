@@ -58,7 +58,7 @@
 
     function getInvTranslateVal(maxVal) {
       // Inverted for footer
-      var heightFrac = viewHeight * 0.75;
+      var heightFrac = viewHeight * 0.6;
       return (
         maxVal - maxVal * (Math.min(heightFrac, scrollBottom) / heightFrac)
       );
