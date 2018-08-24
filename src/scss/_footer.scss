@@ -74,21 +74,54 @@
   padding-bottom: 0;
 
   #footerImage {
-    background: url("../img/footer.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 248px;
+    position: relative;
 
-    // Retina Display
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.25),
-      only screen and (min--moz-device-pixel-ratio: 1.25),
-      only screen and (-o-min-device-pixel-ratio: 1.25/1),
-      only screen and (min-device-pixel-ratio: 1.25),
-      only screen and (min-resolution: 200dpi),
-      only screen and (min-resolution: 1.25dppx) {
-      background: url("../img/footer@2x.png");
-      height: 496px;
+    .background {
+      width: 100%;
+    }
+
+    .art-item {
+      position: absolute;
+      height: auto;
+
+      &.circle {
+        width: 4.5%;
+
+        &.big {
+          width: 5.5%;
+        }
+
+        &.c1 {
+          top: 52%;
+          left: 43%;
+        }
+        &.c2 {
+          top: 56%;
+          left: 84%;
+        }
+      }
+
+      &.box {
+        width: 6.5%;
+
+        &.b1 {
+          top: 46%;
+          left: 2%;
+        }
+        &.b2 {
+          top: 77%;
+          left: 55%;
+        }
+      }
+
+      &.vehicle {
+        width: 11%;
+
+        &.v1 {
+          top: 36%;
+          left: 17%;
+        }
+      }
     }
   }
 
