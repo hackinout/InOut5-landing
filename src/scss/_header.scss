@@ -34,24 +34,61 @@ header {
       &.circle {
         width: 4.5%;
 
+        &.big {
+          width: 5.5%;
+        }
+
         &.c1 {
+          top: 70%;
+          left: 1%;
+        }
+        &.c2 {
+          top: 56%;
+          left: 2%;
+        }
+        &.c3 {
           top: 15%;
           left: 8%;
         }
-    
-        &.c2 {
+        &.c4 {
+          top: 5%;
+          left: 11%;
+        }
+        &.c5 {
           top: 30%;
           left: 14%;
         }
-    
-        &.c3 {
+        &.c6 {
           top: 4%;
           left: 18%;
         }
-    
-        &.c4 {
+        &.c7 {
+          top: 64%;
+          left: 20%;
+        }
+        &.c8 {
+          top: 40%;
+          left: 28%;
+        }
+        &.c9 {
+          top: 12%;
+          left: 27%;
+        }
+        &.c10 {
+          top: 57%;
+          left: 45%;
+        }
+        &.c11 {
+          top: 64%;
+          left: 60%;
+        }
+        &.c12 {
           top: 21%;
           left: 70%;
+        }
+        &.c13 {
+          top: 72%;
+          left: 96%;
         }
       }
 
@@ -62,10 +99,17 @@ header {
           top: 54%;
           left: 24.5%;
         }
-    
         &.b2 {
+          top: 2%;
+          left: 34%;
+        }
+        &.b3 {
           top: 26%;
           left: 81%;
+        }
+        &.b4 {
+          top: 5%;
+          left: 83%;
         }
       }
 
@@ -76,7 +120,7 @@ header {
           top: 38%;
           left: 3%;
         }
-    
+
         &.v2 {
           top: 32%;
           left: 89%;
