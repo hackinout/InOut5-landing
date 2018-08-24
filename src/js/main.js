@@ -46,15 +46,25 @@
 
   var viewHeight = $(window).height();
   $(window).scroll(function(event) {
-    var scrollPos = $(window).scrollTop();
+    var scrollTop = $(window).scrollTop();
+    var scrollBottom = $(document).height() - viewHeight - scrollTop;
 
     function getTranslateVal(maxVal) {
       // Control animation speed by adjusting total scroll
       // for completion of animation
       var heightFrac = viewHeight * 0.9;
-      return maxVal * (Math.min(heightFrac, scrollPos) / heightFrac);
+      return maxVal * (Math.min(heightFrac, scrollTop) / heightFrac);
     }
 
+    function getInvTranslateVal(maxVal) {
+      // Inverted for footer
+      var heightFrac = viewHeight * 0.75;
+      return (
+        maxVal - maxVal * (Math.min(heightFrac, scrollBottom) / heightFrac)
+      );
+    }
+
+    // Header art-items animation
     $("#heroImage>.c1").css(
       "transform",
       "translate3d(" +
@@ -207,6 +217,50 @@
         getTranslateVal(4) +
         "vw," +
         getTranslateVal(-1.5) +
+        "vw, 0)"
+    );
+
+    // Footer art-items animation
+    $("#footerImage>.c1").css(
+      "transform",
+      "translate3d(" +
+        getInvTranslateVal(2) +
+        "vw," +
+        getInvTranslateVal(1.5) +
+        "vw, 0)"
+    );
+    $("#footerImage>.c2").css(
+      "transform",
+      "translate3d(" +
+        getInvTranslateVal(-3) +
+        "vw," +
+        getInvTranslateVal(1) +
+        "vw, 0)"
+    );
+
+    $("#footerImage>.b1").css(
+      "transform",
+      "translate3d(" +
+        getInvTranslateVal(2) +
+        "vw," +
+        getInvTranslateVal(1.5) +
+        "vw, 0)"
+    );
+    $("#footerImage>.b2").css(
+      "transform",
+      "translate3d(" +
+        getInvTranslateVal(3) +
+        "vw," +
+        getInvTranslateVal(-1) +
+        "vw, 0)"
+    );
+
+    $("#footerImage>.v1").css(
+      "transform",
+      "translate3d(" +
+        getInvTranslateVal(3) +
+        "vw," +
+        getInvTranslateVal(-1) +
         "vw, 0)"
     );
   });
