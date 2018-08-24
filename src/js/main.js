@@ -49,17 +49,26 @@
     var scrollPos = $(window).scrollTop();
 
     function getTranslateVal(maxVal) {
-      // Animation completes in 1/4 of screen height scroll
-      var heightFrac = viewHeight / 4;
+      // Control animation speed by adjusting total scroll
+      // for completion of animation
+      var heightFrac = viewHeight * 0.9;
       return maxVal * (Math.min(heightFrac, scrollPos) / heightFrac);
     }
 
-    $("#heroImage>.c2").css(
+    $("#heroImage>.c1").css(
       "transform",
       "translate3d(" +
         getTranslateVal(3) +
         "vw," +
-        getTranslateVal(2.5) +
+        getTranslateVal(-1) +
+        "vw, 0)"
+    );
+    $("#heroImage>.c2").css(
+      "transform",
+      "translate3d(" +
+        getTranslateVal(-2) +
+        "vw," +
+        getTranslateVal(-1.5) +
         "vw, 0)"
     );
     $("#heroImage>.c3").css(
@@ -67,15 +76,87 @@
       "translate3d(" +
         getTranslateVal(3) +
         "vw," +
-        getTranslateVal(2.5) +
+        getTranslateVal(-1) +
         "vw, 0)"
     );
     $("#heroImage>.c4").css(
       "transform",
       "translate3d(" +
+        getTranslateVal(2) +
+        "vw," +
+        getTranslateVal(-0.5) +
+        "vw, 0)"
+    );
+    $("#heroImage>.c5").css(
+      "transform",
+      "translate3d(" +
+        getTranslateVal(3) +
+        "vw," +
+        getTranslateVal(2.5) +
+        "vw, 0)"
+    );
+    $("#heroImage>.c6").css(
+      "transform",
+      "translate3d(" +
+        getTranslateVal(3) +
+        "vw," +
+        getTranslateVal(2.5) +
+        "vw, 0)"
+    );
+    $("#heroImage>.c7").css(
+      "transform",
+      "translate3d(" +
+        getTranslateVal(-2) +
+        "vw," +
+        getTranslateVal(-1.5) +
+        "vw, 0)"
+    );
+    $("#heroImage>.c8").css(
+      "transform",
+      "translate3d(" +
+        getTranslateVal(2) +
+        "vw," +
+        getTranslateVal(1.5) +
+        "vw, 0)"
+    );
+    $("#heroImage>.c9").css(
+      "transform",
+      "translate3d(" +
+        getTranslateVal(3) +
+        "vw," +
+        getTranslateVal(-1) +
+        "vw, 0)"
+    );
+    $("#heroImage>.c10").css(
+      "transform",
+      "translate3d(" +
+        getTranslateVal(-3) +
+        "vw," +
+        getTranslateVal(1) +
+        "vw, 0)"
+    );
+    $("#heroImage>.c11").css(
+      "transform",
+      "translate3d(" +
+        getTranslateVal(-3) +
+        "vw," +
+        getTranslateVal(-2) +
+        "vw, 0)"
+    );
+    $("#heroImage>.c12").css(
+      "transform",
+      "translate3d(" +
         getTranslateVal(-3) +
         "vw," +
         getTranslateVal(-2.5) +
+        "vw, 0)"
+    );
+    $("#heroImage>.c13").css(
+      "transform",
+      "translate3d(" +
+        getTranslateVal(-3) +
+        "vw," +
+        getTranslateVal(1) +
         "vw, 0)"
     );
 
@@ -90,7 +171,23 @@
     $("#heroImage>.b2").css(
       "transform",
       "translate3d(" +
+        getTranslateVal(-2) +
+        "vw," +
+        getTranslateVal(-1.5) +
+        "vw, 0)"
+    );
+    $("#heroImage>.b3").css(
+      "transform",
+      "translate3d(" +
         getTranslateVal(-3) +
+        "vw," +
+        getTranslateVal(1.5) +
+        "vw, 0)"
+    );
+    $("#heroImage>.b4").css(
+      "transform",
+      "translate3d(" +
+        getTranslateVal(3) +
         "vw," +
         getTranslateVal(1.5) +
         "vw, 0)"
