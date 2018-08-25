@@ -491,8 +491,8 @@
               <div class="card-body pt-2">
                 Not to worry, most people don’t! We’ll have team formation and ideation events geared towards helping you find people to
                 work with. You can join our
-                <a href="https://www.facebook.com/groups/inoutconnect/" target="_blank">Facebook Group</a> to find potential
-                teammates.
+                <a href="https://www.facebook.com/groups/inoutconnect/" target="_blank" rel="noreferrer">Facebook Group</a>
+                to find potential teammates.
               </div>
             </div>
           </div>
@@ -685,7 +685,7 @@
     </div>
 
     <div>
-      <img src="img/footer-mobile@2x.png" srcset="mg/footer-mobile.png 1x, mg/footer-mobile@2x.png 2x" alt="Footer Image" class="img-fluid d-block d-md-none"
+      <img src="img/footer-mobile@2x.png" srcset="img/footer-mobile.png 1x, img/footer-mobile@2x.png 2x" alt="Footer Image" class="img-fluid d-block d-md-none"
       />
       <div id="footerImage" class="d-none d-md-block">
         <img src="img/footer@2x.png" srcset="img/footer.png 1x, img/footer@2x.png 2x" alt="Footer Image" class="img-fluid background"
@@ -729,7 +729,7 @@
 
   <!-- Custom scripts -->
   <script src="js/main.min.js"></script>
-  <script src="js/track-modal.min.js"></script>
+  <script src="js/track-modal.min.js" defer></script>
 
   <script src="https://applynow.dev.devfolio.co"></script>
   <script>
@@ -762,6 +762,16 @@
     document.querySelector('#applynow-button-hero').addEventListener('click', openModal);
     document.querySelector('#applynow-button-cta').addEventListener('click', openModal);
 
+    // Register the service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(function (registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function (err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
   </script>
 
 </body>
