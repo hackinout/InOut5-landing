@@ -88,6 +88,7 @@ gulp.task("copy:files", function() {
   return gulp
     .src([
       "./src/*.*",
+      "./src/*/*.woff",
       "./src/*/*.min.css",
       "./src/*/*.min.js",
       "!./src/**/*.html"
@@ -131,7 +132,8 @@ gulp.task("serve", ["css", "js", "html"], function() {
   browserSync.init({
     server: {
       baseDir: "./public"
-    }
+    },
+    port: "8080"
   });
 });
 
