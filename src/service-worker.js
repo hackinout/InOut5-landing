@@ -3,8 +3,13 @@ var version = "0.0.1";
 var cacheName = "swInOut";
 var cache = cacheName + "-" + version;
 var filesToCache = [
-  "img/*.png",
-  "img/*.svg" //Note that this is different from below
+  "css/main.min.css",
+  "js/main.min.js",
+  "fonts/sanfranciscodisplay-regular-webfont.woff",
+  "img/hero.png",
+  "img/hero-mobile.png",
+  "img/footer.png",
+  "img/footer-mobile.png"
 ];
 
 //Add event listener for install
