@@ -38,6 +38,17 @@ section {
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+
+  &.disabled {
+    background-color: $blue-light;
+    border: none;
+
+    &:hover,
+    &:active {
+      background-color: $blue-light;
+      border: none;
+    }
+  }
 }
 
 h2 {
