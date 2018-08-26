@@ -40,7 +40,7 @@
         font-size: $font-size-small;
 
         &::after {
-          content: "\1f862";
+          content: url("../img/icon-right-arrow.svg");
           padding: 0 8px;
           position: relative;
           top: 1px;
@@ -157,7 +157,7 @@
         }
 
         &::after {
-          content: "\1f862";
+          content: url("../img/icon-right-arrow.svg");
           padding: 0 8px;
         }
       }
