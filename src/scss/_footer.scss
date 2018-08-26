@@ -9,7 +9,7 @@
     }
 
     .social-link {
-      transition: 0.1s ease-in background-color;
+      transition: background-color 0.1s ease-in;
 
       &:nth-child(odd) {
         background-color: #9f8cdb;
@@ -29,8 +29,8 @@
         &.linkedin {
           background-color: #0077b5;
         }
-        &.slack {
-          background-color: #4d394b;
+        &.telegram {
+          background-color: #32afed;
         }
         &.medium {
           background-color: $black;
@@ -60,8 +60,8 @@
     &.twitter {
       background-image: url(../img/icon-twitter.svg);
     }
-    &.slack {
-      background-image: url(../img/icon-slack.svg);
+    &.telegram {
+      background-image: url(../img/icon-telegram.svg);
     }
     &.medium {
       background-image: url(../img/icon-medium.svg);
@@ -138,6 +138,13 @@
 
       a {
         color: $white;
+        opacity: 0.8;
+        transition: opacity 0.1s ease-in;
+
+        &:hover {
+          text-decoration: none;
+          opacity: 1;
+        }
       }
     }
   }
