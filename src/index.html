@@ -135,7 +135,7 @@
           <div class="title mt-2">13 - 14 October, 2018 | Bangalore, India</div>
         </div>
         <div class="mx-md-5 mt-md-0 mt-5">
-          <button class="btn btn-primary btn-lg py-3 px-5" id="applynow-button-hero">Apply Now</button>
+          <button class="btn btn-primary btn-lg py-3 px-5 disabled" id="applynow-button-hero">Apply Now</button>
         </div>
       </div>
     </div>
@@ -647,7 +647,7 @@
         <div class="col-lg-10 mx-auto text-center">
           <img class="img-fluid" src="img/title-see-you-soon.png" alt="See You Soon">
           <br />
-          <button class="btn btn-primary btn-lg py-3 px-5 mt-5" id="applynow-button-cta">Apply Now</button>
+          <button class="btn btn-primary btn-lg py-3 px-5 mt-5 disabled" id="applynow-button-cta">Apply Now</button>
         </div>
       </div>
     </div>
@@ -753,6 +753,9 @@
       $('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
         $(this).parent('.card').removeClass('transition');
       });
+
+      $('#applynow-button-cta').removeClass('disabled');
+      $('#applynow-button-hero').removeClass('disabled');
     });
 
     function openModal() {
