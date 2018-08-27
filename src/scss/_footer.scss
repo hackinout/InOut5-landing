@@ -1,0 +1,151 @@
+#social {
+  .social-links {
+    background-color: $blue;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .row {
+      margin: 0;
+    }
+
+    .social-link {
+      transition: background-color 0.1s ease-in;
+
+      &:nth-child(odd) {
+        background-color: #9f8cdb;
+      }
+
+      &:hover {
+        cursor: pointer;
+        &.twitter {
+          background-color: #1da1f2;
+        }
+        &.facebook {
+          background-color: #4267b2;
+        }
+        &.instagram {
+          background: #d6249f;
+        }
+        &.linkedin {
+          background-color: #0077b5;
+        }
+        &.telegram {
+          background-color: #32afed;
+        }
+        &.medium {
+          background-color: $black;
+        }
+      }
+      @include flex-center;
+      padding: 48px 0;
+
+      .social-icon {
+        display: block;
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  .social-icon {
+    &.facebook {
+      background-image: url(../img/icon-facebook.svg);
+    }
+    &.instagram {
+      background-image: url(../img/icon-instagram.svg);
+    }
+    &.linkedin {
+      background-image: url(../img/icon-linkedin.svg);
+    }
+    &.twitter {
+      background-image: url(../img/icon-twitter.svg);
+    }
+    &.telegram {
+      background-image: url(../img/icon-telegram.svg);
+    }
+    &.medium {
+      background-image: url(../img/icon-medium.svg);
+    }
+  }
+}
+
+#footer {
+  background-color: $pink-light;
+  padding-bottom: 0;
+
+  #footerImage {
+    position: relative;
+
+    .background {
+      width: 100%;
+    }
+
+    .art-item {
+      position: absolute;
+      height: auto;
+
+      &.circle {
+        width: 4.5%;
+
+        &.big {
+          width: 5.5%;
+        }
+
+        &.c1 {
+          top: 52%;
+          left: 43%;
+        }
+        &.c2 {
+          top: 56%;
+          left: 84%;
+        }
+      }
+
+      &.box {
+        width: 6.5%;
+
+        &.b1 {
+          top: 46%;
+          left: 2%;
+        }
+        &.b2 {
+          top: 77%;
+          left: 55%;
+        }
+      }
+
+      &.vehicle {
+        width: 11%;
+
+        &.v1 {
+          top: 36%;
+          left: 17%;
+        }
+      }
+    }
+  }
+
+  .footer-container {
+    background-color: $blue;
+
+    .footer-bar {
+      font-size: $font-size-small;
+      color: $white;
+
+      div {
+        padding: 16px 0;
+      }
+
+      a {
+        color: $white;
+        opacity: 0.8;
+        transition: opacity 0.1s ease-in;
+
+        &:hover {
+          text-decoration: none;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

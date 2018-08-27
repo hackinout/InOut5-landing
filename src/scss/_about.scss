@@ -1,0 +1,31 @@
+#about {
+  background-color: $green;
+
+  .art {
+    .text {
+      margin-left: 8rem;
+    }
+
+    .line {
+      width: 320px;
+
+      &-1 {
+        .text {
+          margin-top: -24px;
+          margin-bottom: 40px;
+        }
+      }
+      &-2 {
+        .text {
+          margin-top: -48px;
+          margin-bottom: 56px;
+        }
+      }
+      &-3 {
+        .text {
+          margin-top: -24px;
+        }
+      }
+    }
+  }
+}

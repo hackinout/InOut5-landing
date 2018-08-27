@@ -59,3 +59,6 @@ typings/
 
 # DS Store File
 .DS_Store
+
+# VS Code config
+.vscode

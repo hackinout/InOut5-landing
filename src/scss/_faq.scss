@@ -1,0 +1,93 @@
+#faq {
+  background-color: $pink-light;
+
+  a {
+    color: $blue;
+    font-weight: bold;
+  }
+
+  .contact-links {
+    font-size: $font-size-small;
+
+    a {
+      margin: 0 1rem;
+
+      img {
+        margin: -4px 4px 0 0;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $blue-dark;
+      }
+    }
+  }
+
+  #accordion {
+    .card {
+      border: 2px solid $yellow;
+      border-radius: 5px;
+      transition: border 0.2s linear;
+
+      &.active {
+        border: 2px solid $blue;
+      }
+
+      .card-header {
+        text-align: left;
+        color: $red;
+        font-weight: bold;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+
+        // Bootstrap resets
+        border: none;
+        background: none;
+
+        &::before {
+          content: url("../img/icon-minus.svg");
+          padding-top: 7px;
+          margin-right: 1rem;
+          transition: all 0.4s ease-out;
+        }
+
+        &.collapsed {
+          &::before {
+            content: url("../img/icon-plus.svg");
+          }
+        }
+      }
+
+      &.transition {
+        .card-header {
+          &::before {
+            animation: rotate 0.8s ease-out;
+          }
+        }
+
+        &.active {
+          .card-header {
+            &::before {
+              animation: rotate 0.4s ease-out;
+            }
+          }
+        }
+      }
+
+      .card-body {
+        color: $brown;
+        font-size: $font-size-small;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

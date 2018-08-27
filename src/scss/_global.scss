@@ -1,0 +1,69 @@
+body {
+  @include font-primary;
+  font-size: $font-size-base;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-primary;
+  font-weight: 700;
+}
+
+section {
+  padding: 128px 0;
+}
+
+.btn-primary {
+  background-color: $green;
+  border-color: $green;
+
+  &:hover {
+    background-color: $green-dark;
+    border-color: $green-dark;
+  }
+
+  &:active {
+    background-color: $green-dark !important;
+    border-color: $green-dark !important;
+  }
+
+  &.btn-lg {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &.disabled {
+    background-color: $blue-light;
+    border: none;
+
+    &:hover,
+    &:active {
+      background-color: $blue-light;
+      border: none;
+    }
+  }
+}
+
+h2 {
+  font-size: 48px;
+}
+
+#cta {
+  background-color: $pink-light;
+  padding: 64px 0;
+}
+
+#codeOfConduct {
+  background-color: $pink-light;
+
+  .section-heading {
+    color: $red;
+  }
+}

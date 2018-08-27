@@ -1,44 +1,40 @@
 {
-  "name": "inout",
-  "version": "1.0.0",
-  "description": "Landing Page for InOut 5th Edition",
-  "main": "index.js",
+  "name": "devfolio-landing-page-starter",
+  "version": "0.0.0",
+  "description": "Devfolio starter for landing pages",
   "scripts": {
-    "build": "gulp build",
-    "start": "gulp"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hackinout/InOut5-landing.git"
+    "build": "gulp clean && gulp build",
+    "dev": "gulp",
+    "serve": "gulp serve",
+    "clean": "gulp clean"
   },
   "keywords": [
-    "hackathon",
-    "inout"
+    "landing",
+    "landing-page",
+    "homepage",
+    "devfolio"
   ],
-  "license": "MIT",
+  "homepage": "https://github.com/devfolioco/landing-page-starter/",
   "bugs": {
-    "url": "https://github.com/hackinout/InOut5-landing/issues"
+    "url": "https://github.com/devfolioco/landing-page-starter/issues"
   },
-  "homepage": "https://github.com/hackinout/InOut5-landing#readme",
+  "license": "MIT",
+  "author": "Ajay NS <ajay.ns@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devfolioco/landing-page-starter"
+  },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "browser-sync": "2.23.6",
     "gulp": "^3.9.1",
-    "gulp-postcss": "^7.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-svg-sprite": "^1.3.7",
-    "gulp-uncss": "^1.0.6"
-  },
-  "dependencies": {
-    "browser-sync": "^2.18.8",
-    "del": "^2.2.2",
-    "gulp-clean-css": "^3.0.4",
-    "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-imagemin": "^3.2.0",
-    "gulp-minify": "^0.0.15",
-    "gulp-nodemon": "^2.2.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "3.9.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.1.2",
-    "pump": "^1.0.2"
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "3.0.0",
+    "imagemin-mozjpeg": "^7.0.0"
   }
 }
