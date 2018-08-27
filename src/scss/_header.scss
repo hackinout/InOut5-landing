@@ -1,16 +1,13 @@
 header {
   background-color: #fffbf3;
   padding-bottom: 96px;
-
   .hero-image {
     margin-bottom: -56px;
   }
-
   .header-text {
     .title {
       color: $blue-dark;
     }
-
     .subtitle {
       color: $blue;
       font-size: 14px;
@@ -19,25 +16,19 @@ header {
       text-transform: uppercase;
     }
   }
-
   #heroImage {
     position: relative;
-
     .background {
       width: 100%;
     }
-
     .art-item {
       position: absolute;
       height: auto;
-
       &.circle {
         width: 4.5%;
-
         &.big {
           width: 5.5%;
         }
-
         &.c1 {
           top: 70%;
           left: 1%;
@@ -91,10 +82,8 @@ header {
           left: 96%;
         }
       }
-
       &.box {
         width: 6.5%;
-
         &.b1 {
           top: 54%;
           left: 24.5%;
@@ -112,10 +101,8 @@ header {
           left: 83%;
         }
       }
-
       &.vehicle {
         width: 11%;
-
         &.v1 {
           top: 38%;
           left: 3%;
@@ -125,10 +112,8 @@ header {
           left: 89%;
         }
       }
-
       &.wifi {
         width: 1.2%;
-
         &.w1 {
           top: 59.5%;
           left: 8.7%;
@@ -136,7 +121,6 @@ header {
         &.w2 {
           top: 2.5%;
           left: 49.5%;
-
           path {
             animation-delay: 1s !important;
           }
@@ -144,12 +128,10 @@ header {
         &.w3 {
           top: 21.5%;
           left: 89.25%;
-
           path {
             animation-delay: 2s !important;
           }
         }
-
         path {
           &:nth-child(1) {
             animation: blink-1 5s linear infinite alternate;
@@ -196,5 +178,32 @@ header {
   }
   100% {
     visibility: visible;
+  }
+}
+
+.fill {
+  display: none;
+}
+
+.apply-btn.disabled>.fill {
+  background-color: $green-dark !important;
+  border: 1px solid $green-dark !important;
+  box-sizing: unset;
+  display: block;
+  height: 100%;
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  z-index: -1;
+  animation: fillprogress 40s;
+  transition: all 200ms ease-out;
+}
+
+@keyframes fillprogress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }

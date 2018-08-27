@@ -21,34 +21,32 @@ section {
 .btn-primary {
   background-color: $green;
   border-color: $green;
-
+  display: flex;
+  overflow: hidden;
+  position: relative;
   &:hover {
     background-color: $green-dark;
     border-color: $green-dark;
   }
-
   &:active {
     background-color: $green-dark !important;
     border-color: $green-dark !important;
   }
-
   &.btn-lg {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
-
   &.disabled {
-    background-color: $blue-light;
-    border: none;
-
-    &:hover,
-    &:active {
-      background-color: $blue-light;
-      border: none;
-    }
+    background-color: $green !important;
+    border-color: $green !important;
   }
+}
+
+.btn-primary:disabled {
+  background-color: $green !important;
+  border-color: $green !important;
 }
 
 h2 {
@@ -62,7 +60,6 @@ h2 {
 
 #codeOfConduct {
   background-color: $pink-light;
-
   .section-heading {
     color: $red;
   }

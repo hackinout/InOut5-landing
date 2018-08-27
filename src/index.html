@@ -138,7 +138,10 @@
           <div class="title mt-2">13 - 14 October, 2018 | Bangalore, India</div>
         </div>
         <div class="mx-md-5 mt-md-0 mt-5">
-          <button class="btn btn-primary btn-lg py-3 px-5 disabled" id="applynow-button-hero">Apply Now</button>
+          <button class="btn btn-primary btn-lg py-3 px-5 disabled apply-btn" id="applynow-button-hero">
+            Apply with Devfolio
+            <div class="fill"></div>
+          </button>
         </div>
       </div>
     </div>
@@ -530,8 +533,8 @@
               <div class="card-body pt-2">
                 If you're looking to be a volunteer or mentor (i.e. someone with technical skills who'd be willing to help out participants
                 during the weekend), you should reach out to us at
-                <a href="mailto:volunteer@hackinout.co">volunteer@hackinout.co</a>. If your company is interested in becoming
-                a sponsor, check out the sponsorship section above.
+                <a href="mailto:volunteer@hackinout.co">volunteer@hackinout.co</a>. If your company is interested in becoming a sponsor, check out the sponsorship
+                section above.
               </div>
             </div>
           </div>
@@ -659,7 +662,10 @@
         <div class="col-lg-10 mx-auto text-center">
           <img class="img-fluid" src="img/title-see-you-soon.png" alt="See You Soon">
           <br />
-          <button class="btn btn-primary btn-lg py-3 px-5 mt-5 disabled" id="applynow-button-cta">Apply Now</button>
+          <button class="btn btn-primary btn-lg py-3 px-5 mt-5 apply-btn disabled" id="applynow-button-cta" style="margin: 0 auto">
+            <div class="fill"></div>
+            Apply with Devfolio
+          </button>
         </div>
       </div>
     </div>
@@ -795,10 +801,14 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112787491-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', 'UA-112787491-1');
+
   </script>
 
 </body>
