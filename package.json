@@ -1,28 +1,22 @@
 {
-  "name": "devfolio-landing-page-starter",
+  "name": "InOut 5 Website",
   "version": "0.0.0",
-  "description": "Devfolio starter for landing pages",
+  "description": "Landing page for fifth edition of InOut",
   "scripts": {
     "build": "gulp clean && gulp build",
     "dev": "gulp",
     "serve": "gulp serve",
     "clean": "gulp clean"
   },
-  "keywords": [
-    "landing",
-    "landing-page",
-    "homepage",
-    "devfolio"
-  ],
-  "homepage": "https://github.com/devfolioco/landing-page-starter/",
+  "homepage": "https://hackinout.co",
   "bugs": {
-    "url": "https://github.com/devfolioco/landing-page-starter/issues"
+    "url": "https://github.com/hackinout/website/issues"
   },
   "license": "MIT",
   "author": "Ajay NS <ajay.ns@outlook.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/devfolioco/landing-page-starter"
+    "url": "https://github.com/hackinout/website"
   },
   "devDependencies": {
     "browser-sync": "2.23.6",
