@@ -2,7 +2,7 @@ header {
   background-color: #fffbf3;
   padding-bottom: 96px;
   .hero-image {
-    margin-bottom: -56px;
+    overflow: hidden;
   }
   .header-text {
     .title {
@@ -15,6 +15,12 @@ header {
       letter-spacing: 5px;
       text-transform: uppercase;
     }
+  }
+  .hero-container {
+    min-width: 1600px;
+    width: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
   #heroImage {
     position: relative;
@@ -185,7 +191,7 @@ header {
   display: none;
 }
 
-.apply-btn.disabled>.fill {
+.apply-btn.disabled > .fill {
   background-color: $green-dark !important;
   border: 1px solid $green-dark !important;
   box-sizing: unset;
