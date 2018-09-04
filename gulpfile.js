@@ -38,6 +38,10 @@ gulp.task("css:compile", function() {
     .pipe(browserSync.stream());
 });
 
+gulp.task("css:copy", function() {
+  return gulp.src("./src/scss/*.css").pipe(gulp.dest("./public/css"));
+});
+
 // CSS
 gulp.task("css", ["css:compile"]);
 
