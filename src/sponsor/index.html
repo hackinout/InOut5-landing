@@ -369,7 +369,6 @@
     <!-- Custom JavaScript -->
     <script src="https://cdn.rawgit.com/peachananr/simple-text-rotator/master/jquery.simple-text-rotator.min.js"></script>
     <script src="owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script>
       $(".rotate").text(
         'build a top creator community in India | connect with intensely inquisitive minds | raise your brand awareness | witness a remarkable synergy | get access to the best developer talent | inspire and motivate hackathon culture in india'
@@ -399,116 +398,6 @@
             }
           }
         });
-      });
-
-      var api_status
-
-      $('.sponsorship-form #number').on('focus', function () {
-        $('.sponsorship-form #number').val('+91')
-      })
-
-      jQuery.validator.addMethod("phone", function (value, element) {
-        return this.optional(element) || /^\+?[1-9]\d{1,14}$/.test(value);
-      }, 'Please enter a valid mobile number.');
-
-      $('.sponsorship-form').validate({
-        rules: {
-          name: {
-            required: true
-          },
-          company: {
-            minlength: 3,
-            required: true
-          },
-          email: {
-            required: true,
-            email: true
-          },
-          contact_number: {
-            required: true,
-            maxlength: 15,
-            minlength: 13,
-            phone: true
-          },
-          designation: {
-            required: true
-          }
-        },
-        messages: {
-          name: "Please enter your full name.",
-          email: "Please enter your work email.",
-          company: "Please enter your company name.",
-          designation: "Please enter your designation.",
-          contact_number: "Please enter a valid mobile number."
-        },
-        highlight: function (element) {
-          $(element).closest('.form-group').addClass('has-error');
-          $(element).css('border-color', '#FF8282')
-        },
-        unhighlight: function (element) {
-          $(element).closest('.form-group').removeClass('has-error');
-          $(element).css('border-color', '#00FFC2')
-        },
-        errorElement: 'span',
-        errorClass: 'help-block',
-        errorPlacement: function (error, element) {
-          if (element.parent('.custom-form-control').length) {
-            error.insertAfter(element.parent());
-          } else {
-            error.insertAfter(element);
-          }
-        },
-        submitHandler: function (form) {
-          $('.message').addClass('hide')
-          $('.sponsorship-form button').text('Sending..').attr("disabled", true)
-          $.ajax({
-            type: "POST",
-            url: "https://hackinout.co/api/v1/sponsors",
-            contentType: "application/json",
-            data: JSON.stringify({
-              name: $('.sponsorship-form #name').val(),
-              company: $('.sponsorship-form #company').val(),
-              email: $('.sponsorship-form #email').val(),
-              contact_number: $('.sponsorship-form #number').val(),
-              designation: $('.sponsorship-form #designation').val(),
-            }),
-            success: function (data, xhr) {
-              $('.sponsorship-form input').val("")
-            },
-            error: function showError(e) {
-              $('.sponsorship-form button').text('SUBMIT').attr("disabled", false)
-              r = jQuery.parseJSON(e.responseText).message
-              return r
-            },
-            complete: function (e) {
-              api_status = e.status
-              r = jQuery.parseJSON(e.responseText).message
-              if (api_status === 201) {
-                $('.message')
-                  .removeClass('hide has-error')
-                  .text("Thanks! You'll be hearing from us soon.")
-                $('.sponsorship-form button').text('SUBMITTED').attr("disabled", true)
-              } else if (api_status === 400) {
-                $('.message')
-                  .removeClass('hide')
-                  .addClass('has-error')
-                  .text(r)
-              } else if (api_status === 429) {
-                $('.message')
-                  .removeClass('hide')
-                  .addClass('has-error')
-                  .text('Slow down, API Limit exceeded!')
-              } else {
-                $('.message')
-                  .removeClass('hide')
-                  .addClass('has-error')
-                  .text("Whoops! Try again")
-              }
-            }
-
-          });
-          return false;
-        }
       });
     </script>
     <!-- Google Analytics -->
