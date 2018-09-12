@@ -1,0 +1,34 @@
+#welcome {
+  background-color: $pink-light;
+  color: $black;
+
+  p {
+    color: $black;
+  }
+
+  .cards > [class*="col-"] {
+    display: flex;
+  }
+
+  .card {
+    border: 2px solid $yellow;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+
+    .content {
+      padding: 32px;
+
+      .heading {
+        font-size: $font-size-base;
+        font-weight: bold;
+        color: $blue;
+        margin-bottom: 8px;
+      }
+
+      .body {
+        font-size: 18px;
+      }
+    }
+  }
+}
