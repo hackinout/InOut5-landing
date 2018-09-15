@@ -11,18 +11,17 @@
   }
 
   .card {
-    border: 2px solid $yellow;
-    border-radius: 10px;
-    overflow: hidden;
+    border: none;
+    background: none;
     padding: 0;
 
     .content {
-      padding: 32px;
+      padding: 32px 0;
 
       .heading {
         font-size: $font-size-base;
         font-weight: bold;
-        color: $blue;
+        color: $blue-dark;
         margin-bottom: 8px;
       }
 
