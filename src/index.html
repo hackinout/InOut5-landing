@@ -842,7 +842,9 @@
   <script src="js/main.min.js"></script>
   <script src="js/track-modal.min.js" defer></script>
 
+  <!-- Devfolio Apply Now script -->
   <script src="https://apply.devfolio.co"></script>
+
   <script>
     // Preload minus icon for accordion
     if (document.images) {
@@ -869,8 +871,13 @@
     });
 
     function openModal() {
-      const devfolio = new Devfolio('inout');
-      devfolio.open();
+      try {
+        var devfolio = new Devfolio('inout');
+        devfolio.open();
+      } catch (error) {
+        console.log(error);
+        alert('Devfolio requires an external script to be loaded. Please disable any script blockers on this page and refresh to continue.')
+      }
     }
 
     document.querySelector('#applynow-button-hero').addEventListener('click', openModal);
