@@ -129,6 +129,7 @@
             Apply with Devfolio
             <div class="fill"></div>
           </button>
+          <div class="timer-text" id="timer"></div>
         </div>
       </div>
     </div>
@@ -841,6 +842,7 @@
   <!-- Custom scripts -->
   <script src="js/main.min.js"></script>
   <script src="js/track-modal.min.js" defer></script>
+  <script src="js/jquery.countdown.min.js" defer></script>
 
   <!-- Devfolio Apply Now script -->
   <script src="https://apply.devfolio.co"></script>
@@ -866,8 +868,17 @@
         $(this).parent('.card').removeClass('transition');
       });
 
-      $('#applynow-button-cta').removeClass('disabled');
-      $('#applynow-button-hero').removeClass('disabled');
+      $('#applynow-button-cta, #applynow-button-hero').removeClass('disabled');
+
+      $('#timer').countdown('2018/09/28')
+        .on('update.countdown', function (event) {
+          $(this).html(event.strftime('Applications close in <b>%d:%H:%M:%S</b>'));
+        })
+        .on('finish.countdown', function (event) {
+          $('#applynow-button-hero, #applynow-button-cta').addClass('disabled').attr('disabled', true);
+          $(this).html(event.strftime('Applications closed!'));
+        })
+        .countdown('start');
     });
 
     function openModal() {
@@ -876,7 +887,9 @@
         devfolio.open();
       } catch (error) {
         console.log(error);
-        alert('Devfolio requires an external script to be loaded. Please disable any script blockers on this page and refresh to continue.')
+        alert(
+          'Devfolio requires an external script to be loaded. Please disable any script blockers on this page and refresh to continue.'
+        )
       }
     }
 
@@ -909,10 +922,16 @@
     gtag('config', 'UA-112787491-1');
 
     (function (h, o, t, j, a, r) {
-      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-      h._hjSettings = { hjid: 565518, hjsv: 6 };
+      h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 565518,
+        hjsv: 6
+      };
       a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script'); r.async = 1;
+      r = o.createElement('script');
+      r.async = 1;
       r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
       a.appendChild(r);
     })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
