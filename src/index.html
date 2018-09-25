@@ -124,11 +124,12 @@
           <div class="subtitle">Fifth Edition</div>
           <div class="title mt-2">12 - 14 October, 2018 | Bangalore, India</div>
         </div>
-        <div class="mx-md-5 mt-md-0 mt-5">
+        <div class="d-flex flex-column align-items-center mx-md-5 mt-md-0 mt-5">
           <button class="btn btn-primary btn-lg py-3 px-5 disabled apply-btn" id="applynow-button-hero">
             Apply with Devfolio
             <div class="fill"></div>
           </button>
+          <div class="timer-text" id="timer">Applications close 11:59 PM IST, 28th September 2018</div>
         </div>
       </div>
     </div>
@@ -866,8 +867,7 @@
         $(this).parent('.card').removeClass('transition');
       });
 
-      $('#applynow-button-cta').removeClass('disabled');
-      $('#applynow-button-hero').removeClass('disabled');
+      $('#applynow-button-cta, #applynow-button-hero').removeClass('disabled');
     });
 
     function openModal() {
@@ -876,7 +876,9 @@
         devfolio.open();
       } catch (error) {
         console.log(error);
-        alert('Devfolio requires an external script to be loaded. Please disable any script blockers on this page and refresh to continue.')
+        alert(
+          'Devfolio requires an external script to be loaded. Please disable any script blockers on this page and refresh to continue.'
+        )
       }
     }
 
@@ -909,10 +911,16 @@
     gtag('config', 'UA-112787491-1');
 
     (function (h, o, t, j, a, r) {
-      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-      h._hjSettings = { hjid: 565518, hjsv: 6 };
+      h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 565518,
+        hjsv: 6
+      };
       a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script'); r.async = 1;
+      r = o.createElement('script');
+      r.async = 1;
       r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
       a.appendChild(r);
     })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');

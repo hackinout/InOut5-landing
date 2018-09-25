@@ -151,6 +151,13 @@ header {
   }
 }
 
+.timer-text {
+  color: #8166cd;
+  font-size: 18px;
+  margin-top: 8px;
+  text-align: center;
+}
+
 @keyframes blink-1 {
   0% {
     visibility: hidden;
