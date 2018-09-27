@@ -855,7 +855,7 @@
     // Add class to parent on accordion switch
     $(document).ready(function () {
       var disableApplyButtons = function () {
-        $('#applynow-button-cta, #applynow-button-hero').addClass('disabled').attr('disabled', true);
+        $('#applynow-button-cta, #applynow-button-hero').html("Applications are closed.").addClass('disabled').attr('disabled', true);
       }
 
       $('.collapse').on('show.bs.collapse', function () {
@@ -878,8 +878,8 @@
 
       // Once the difference with current time is negative, disable the buttons
       // And change the timer text
-      if (applicationCloseTime.getTime() - Date.now() < 0) {
-        $('#timer').html("Applications closed")
+      if (applicationCloseTime.getTime() - Date.now() > 0) {
+        $('#timer').html("See you in the next edition!")
         disableApplyButtons();
       }
     });
