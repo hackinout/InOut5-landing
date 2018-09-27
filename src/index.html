@@ -854,6 +854,10 @@
 
     // Add class to parent on accordion switch
     $(document).ready(function () {
+      var disableApplyButtons = function () {
+        $('#applynow-button-cta, #applynow-button-hero').addClass('disabled').attr('disabled', true);
+      }
+
       $('.collapse').on('show.bs.collapse', function () {
         $(this).parent('.card').addClass('active transition');
       });
@@ -868,6 +872,16 @@
       });
 
       $('#applynow-button-cta, #applynow-button-hero').removeClass('disabled');
+
+      // Create a local date object for application close date (28th Sept, 2018, 11:59:59)
+      var applicationCloseTime = new Date('2018-09-28T11:59:59');
+
+      // Once the difference with current time is negative, disable the buttons
+      // And change the timer text
+      if (applicationCloseTime.getTime() - Date.now() < 0) {
+        $('#timer').html("Applications closed")
+        disableApplyButtons();
+      }
     });
 
     function openModal() {
