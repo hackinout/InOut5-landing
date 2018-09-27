@@ -878,7 +878,7 @@
 
       // Once the difference with current time is negative, disable the buttons
       // And change the timer text
-      if (applicationCloseTime.getTime() - Date.now() > 0) {
+      if (applicationCloseTime.getTime() - Date.now() < 0) {
         $('#timer').html("See you in the next edition!")
         disableApplyButtons();
       }
