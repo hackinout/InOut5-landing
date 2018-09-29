@@ -21,6 +21,7 @@ section {
 .btn-primary {
   background-color: $green;
   border-color: $green;
+  color: $white !important;
   display: flex;
   overflow: hidden;
   position: relative;

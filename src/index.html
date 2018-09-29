@@ -125,11 +125,10 @@
           <div class="title mt-2">12 - 14 October, 2018 | Bangalore, India</div>
         </div>
         <div class="d-flex flex-column align-items-center mx-md-5 mt-md-0 mt-5">
-          <button class="btn btn-primary btn-lg py-3 px-5 disabled apply-btn" id="applynow-button-hero">
-            Apply with Devfolio
-            <div class="fill"></div>
-          </button>
-          <div class="timer-text" id="timer">Applications close 03:00 AM IST, 29th September 2018</div>
+          <a class="btn btn-primary btn-lg py-3 px-5 apply-btn" href="https://devfolio.co/">
+            Go to Devfolio Dashboard
+          </a>
+          <div class="timer-text" id="timer">Applications are closed. See you in the next edition!</div>
         </div>
       </div>
     </div>
@@ -753,11 +752,11 @@
       <div class="row">
         <div class="col-lg-10 mx-auto text-center">
           <img class="img-fluid" src="img/title-see-you-soon.png" alt="See You Soon">
-          <br />
-          <button class="btn btn-primary btn-lg py-3 px-5 mt-5 apply-btn disabled" id="applynow-button-cta" style="margin: 0 auto">
-            <div class="fill"></div>
-            Apply with Devfolio
-          </button>
+          <div class="mt-5 mx-auto"></div>
+          <a class="btn btn-primary btn-lg py-3 px-5 apply-btn" href="https://devfolio.co/" style="display: inline-block">
+            Go to Devfolio Dashboard
+          </a>
+          <div class="timer-text" id="timer">Applications are closed. See you in the next edition!</div>
         </div>
       </div>
     </div>
@@ -844,7 +843,7 @@
   <script src="js/track-modal.min.js" defer></script>
 
   <!-- Devfolio Apply Now script -->
-  <script src="https://apply.devfolio.co"></script>
+  <!-- <script src="https://apply.devfolio.co"></script> -->
 
   <script>
     // Preload minus icon for accordion
@@ -854,9 +853,9 @@
 
     // Add class to parent on accordion switch
     $(document).ready(function () {
-      var disableApplyButtons = function () {
-        $('#applynow-button-cta, #applynow-button-hero').html("Applications are closed.").addClass('disabled').attr('disabled', true);
-      }
+      // var disableApplyButtons = function () {
+      //   $('#applynow-button-cta, #applynow-button-hero').html("Applications are closed.").addClass('disabled').attr('disabled', true);
+      // }
 
       $('.collapse').on('show.bs.collapse', function () {
         $(this).parent('.card').addClass('active transition');
@@ -871,33 +870,33 @@
         $(this).parent('.card').removeClass('transition');
       });
 
-      $('#applynow-button-cta, #applynow-button-hero').removeClass('disabled');
+      // $('#applynow-button-cta, #applynow-button-hero').removeClass('disabled');
 
-      // Create a local date object for application close date (29th Sept, 2018, 03:00:00)
-      var applicationCloseTime = new Date('2018-09-29T03:00:00');
+      // // Create a local date object for application close date (29th Sept, 2018, 03:00:00)
+      // var applicationCloseTime = new Date('2018-09-29T03:00:00');
 
-      // Once the difference with current time is negative, disable the buttons
-      // And change the timer text
-      if (applicationCloseTime.getTime() - Date.now() < 0) {
-        $('#timer').html("See you in the next edition!")
-        disableApplyButtons();
-      }
+      // // Once the difference with current time is negative, disable the buttons
+      // // And change the timer text
+      // if (applicationCloseTime.getTime() - Date.now() < 0) {
+      //   $('#timer').html("See you in the next edition!")
+      //   disableApplyButtons();
+      // }
     });
 
-    function openModal() {
-      try {
-        var devfolio = new Devfolio('inout');
-        devfolio.open();
-      } catch (error) {
-        console.log(error);
-        alert(
-          'Devfolio requires an external script to be loaded. Please disable any script blockers on this page and refresh to continue.'
-        )
-      }
-    }
+    // function openModal() {
+    //   try {
+    //     var devfolio = new Devfolio('inout');
+    //     devfolio.open();
+    //   } catch (error) {
+    //     console.log(error);
+    //     alert(
+    //       'Devfolio requires an external script to be loaded. Please disable any script blockers on this page and refresh to continue.'
+    //     )
+    //   }
+    // }
 
-    document.querySelector('#applynow-button-hero').addEventListener('click', openModal);
-    document.querySelector('#applynow-button-cta').addEventListener('click', openModal);
+    // document.querySelector('#applynow-button-hero').addEventListener('click', openModal);
+    // document.querySelector('#applynow-button-cta').addEventListener('click', openModal);
 
     // Register the service worker
     if ('serviceWorker' in navigator) {
