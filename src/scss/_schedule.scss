@@ -24,6 +24,7 @@
         font-size: 18px;
         padding: 20px;
         background-color: $white;
+        white-space: nowrap;
 
         &:first-child {
           font-weight: bold;
@@ -48,13 +49,7 @@
       tr {
         border-left: 4px solid $blue;
         border-bottom: 1px solid $blue;
-        border-right: 1px solid $blue;
-      }
-
-      tbody {
-        tr {
-          border-right: 1px solid transparent;
-        }
+        border-right: 1px solid transparent;
       }
 
       td:first-child {
@@ -70,11 +65,27 @@
       tr {
         border-left: 4px solid $pink;
         border-bottom: 1px solid $pink;
-        border-right: 1px solid $pink;
+        border-right: 1px solid transparent;
       }
 
       td:first-child {
         color: $pink;
+      }
+    }
+
+    .table-3 {
+      thead {
+        background-color: $yellow;
+      }
+
+      tr {
+        border-left: 4px solid $yellow;
+        border-bottom: 1px solid $yellow;
+        border-right: 1px solid $yellow;
+      }
+
+      td:first-child {
+        color: $yellow;
       }
     }
   }
@@ -90,6 +101,12 @@
       .table-2 {
         tr {
           border: 1px solid $pink !important;
+        }
+      }
+
+      .table-3 {
+        tr {
+          border: 1px solid $yellow !important;
         }
       }
 
