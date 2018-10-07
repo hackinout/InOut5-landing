@@ -153,11 +153,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#tracks">Tracks</a>
             </li>
-            <!-- SCHEDULE NAV ITEM
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#schedule">Schedule</a>
             </li>
-            -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#sponsors">Sponsors</a>
             </li>
@@ -377,94 +375,127 @@
   </section>
 
   <!-- Schedule -->
-  <!--
   <section id="schedule">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto text-center">
           <img class="img-fluid" src="img/title-schedule.png" alt="Schedule">
           <p class="mt-3">
-            Here's a rough breakdown of the two days you'll be spending at InOut.
+            Here's a rough breakdown of the three days you'll be spending at InOut.
           </p>
         </div>
       </div>
-      <div class="container">
-
-        <div class="row mt-5">
-          <div id="scheduleTable" class="mx-auto flex-lg-row flex-column">
+      <div class="mt-4 mx-auto" style="max-width: 720px">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="schedule-day-1" data-toggle="tab" href="#day-1" role="tab"
+              aria-controls="day-1" aria-selected="true">12 October</a>
+            <a class="nav-item nav-link" id="schedule-day-2" data-toggle="tab" href="#day-2" role="tab" aria-controls="day-2"
+              aria-selected="false">13 October</a>
+            <a class="nav-item nav-link" id="schedule-day-3" data-toggle="tab" href="#day-3" role="tab" aria-controls="day-3"
+              aria-selected="false">14 October</a>
+          </div>
+        </nav>
+        <div class="tab-content" id="scheduleTable">
+          <div class="tab-pane fade show active" id="day-1" role="tabpanel" aria-labelledby="schedule-day-1">
             <table class="table table-1">
-              <thead>
-                <tr>
-                  <th colspan="2">13 October 2018</th>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
-                  <td>8:00 AM</td>
-                  <td>Check In</td>
+                  <td>5:00 PM</td>
+                  <td>Check-In</td>
                 </tr>
                 <tr>
-                  <td>8:00 AM</td>
-                  <td>Workshop by Dan</td>
+                  <td>6:00 PM</td>
+                  <td>Opening Ceremony</td>
                 </tr>
                 <tr>
-                  <td>8:00 AM</td>
-                  <td>Kickoff</td>
+                  <td>6:30 PM - 9:30 PM</td>
+                  <td>Tech Talks + Workshops</td>
                 </tr>
                 <tr>
-                  <td>8:00 AM</td>
-                  <td>Lunch</td>
-                </tr>
-                <tr>
-                  <td>8:00 AM</td>
-                  <td>Tech Talk by Addy</td>
-                </tr>
-                <tr>
-                  <td>8:00 AM</td>
-                  <td>Dinner</td>
-                </tr>
-              </tbody>
-            </table>
-            <table class="table table-2">
-              <thead>
-                <tr>
-                  <th colspan="2">14 October 2018</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>8:00 AM</td>
-                  <td>Check In</td>
-                </tr>
-                <tr>
-                  <td>8:00 AM</td>
-                  <td>Workshop by Nash</td>
-                </tr>
-                <tr>
-                  <td>8:00 AM</td>
-                  <td>Kickoff</td>
-                </tr>
-                <tr>
-                  <td>8:00 AM</td>
-                  <td>Lunch</td>
-                </tr>
-                <tr>
-                  <td>8:00 AM</td>
-                  <td>Tech Talk by Elon Musk</td>
-                </tr>
-                <tr>
-                  <td>8:00 AM</td>
+                  <td>9:30 PM</td>
                   <td>Dinner</td>
                 </tr>
               </tbody>
             </table>
           </div>
-
+          <div class="tab-pane fade" id="day-2" role="tabpanel" aria-labelledby="schedule-day-2">
+            <table class="table table-2">
+              <tbody>
+                <tr>
+                  <td>8:00 AM</td>
+                  <td>Check-In</td>
+                </tr>
+                <tr>
+                  <td>8:30 AM</td>
+                  <td>Breakfast</td>
+                </tr>
+                <tr>
+                  <td>9:30 AM</td>
+                  <td>API Demos</td>
+                </tr>
+                <tr>
+                  <td>10:00 AM</td>
+                  <td>Team Formation</td>
+                </tr>
+                <tr>
+                  <td>1:00 PM</td>
+                  <td>Lunch</td>
+                </tr>
+                <tr>
+                  <td>5:00 PM</td>
+                  <td>Tea Break</td>
+                </tr>
+                <tr>
+                  <td>8:00 PM</td>
+                  <td>Dinner</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane fade" id="day-3" role="tabpanel" aria-labelledby="schedule-day-3">
+            <table class="table table-3">
+              <tbody>
+                <tr>
+                  <td>1:00 AM</td>
+                  <td>Midnight Snacks</td>
+                </tr>
+                <tr>
+                  <td>8:00 AM</td>
+                  <td>Breakfast</td>
+                </tr>
+                <tr>
+                  <td>10:00 AM</td>
+                  <td>
+                    <div class="speaker-type">talk</div>
+                    Women in Tech <br />
+                    <a class="speaker-profile" href="https://twitter.com/chatasweetie" target="_blank" rel="noreferrer">by
+                      Jessica</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12:00 PM</td>
+                  <td>Lunch</td>
+                </tr>
+                <tr>
+                  <td>4:00 PM</td>
+                  <td>Hacking Stops and Judging Begins</td>
+                </tr>
+                <tr>
+                  <td>8:00 PM</td>
+                  <td>Dinner</td>
+                </tr>
+                <tr>
+                  <td>9:00 PM</td>
+                  <td>Goodbye!</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  -->
 
   <!-- Sponsors -->
   <section id="sponsors">

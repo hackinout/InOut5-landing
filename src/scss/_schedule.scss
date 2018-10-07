@@ -1,24 +1,100 @@
 #schedule {
   background-color: $pink-light;
 
-  #scheduleTable {
-    border-radius: 10px;
-    overflow: hidden;
+  a {
+    color: inherit;
+  }
+
+  .speaker {
+    &-type {
+      font-weight: bold;
+      font-size: $font-size-small;
+      text-transform: uppercase;
+      color: $yellow;
+    }
+
+    &-profile {
+      font-size: $font-size-small;
+      color: $blue-dark;
+      font-weight: bold;
+    }
+  }
+
+  .nav-tabs {
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
+    border: none;
 
+    .nav-item {
+      width: 100%;
+      padding: 24px;
+      text-align: center;
+      font-size: $font-size-base;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px 10px 0 0;
+
+      &#schedule-day {
+        &-1 {
+          color: $blue;
+        }
+        &-2 {
+          color: $pink;
+        }
+        &-3 {
+          color: $yellow;
+        }
+      }
+
+      &:hover {
+        background-color: $blue-light;
+      }
+
+      &.active {
+        color: $white !important;
+        &#schedule-day {
+          &-1 {
+            background-color: $blue;
+          }
+          &-2 {
+            background-color: $pink;
+          }
+          &-3 {
+            background-color: $yellow;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 575px) {
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+
+      .nav-item {
+        border-radius: 10px;
+      }
+    }
+  }
+
+  #scheduleTable {
     .table {
       display: block;
+
+      // @media (max-width: 575px) {
+      //   border-radius: 10px;
+      // }
+
       td,
       th {
         border: none;
       }
 
-      th {
-        padding: 32px;
-        text-align: center;
-        color: $white;
-      }
+      // th {
+      //   padding: 32px;
+      //   text-align: center;
+      //   color: $white;
+      // }
 
       td {
         font-size: 18px;
@@ -27,11 +103,12 @@
 
         &:first-child {
           font-weight: bold;
+          white-space: nowrap;
         }
 
         &:last-child {
-          width: 320px;
-          max-width: 320px;
+          width: 100%;
+          max-width: 720px;
         }
       }
 
@@ -41,20 +118,10 @@
     }
 
     .table-1 {
-      thead {
-        background-color: $blue;
-      }
+      border: 2px solid $blue;
 
       tr {
-        border-left: 4px solid $blue;
         border-bottom: 1px solid $blue;
-        border-right: 1px solid $blue;
-      }
-
-      tbody {
-        tr {
-          border-right: 1px solid transparent;
-        }
       }
 
       td:first-child {
@@ -63,45 +130,59 @@
     }
 
     .table-2 {
-      thead {
-        background-color: $pink;
-      }
+      border: 2px solid $pink;
 
       tr {
-        border-left: 4px solid $pink;
         border-bottom: 1px solid $pink;
-        border-right: 1px solid $pink;
       }
 
       td:first-child {
         color: $pink;
       }
     }
-  }
 
-  @media (max-width: 991px) {
-    #scheduleTable {
-      .table-1 {
-        tr {
-          border: 1px solid $blue !important;
-        }
+    .table-3 {
+      border: 2px solid $yellow;
+
+      tr {
+        border-bottom: 1px solid $yellow;
       }
 
-      .table-2 {
-        tr {
-          border: 1px solid $pink !important;
-        }
-      }
-
-      .table {
-        thead {
-          border-radius: 10px 10px 0 0;
-          display: flex;
-          overflow: hidden;
-          text-align: center;
-          justify-content: center;
-        }
+      td:first-child {
+        color: $yellow;
       }
     }
   }
+
+  // @media (max-width: 991px) {
+  //   #scheduleTable {
+  //     .table-1 {
+  //       tr {
+  //         border: 1px solid $blue !important;
+  //       }
+  //     }
+
+  //     .table-2 {
+  //       tr {
+  //         border: 1px solid $pink !important;
+  //       }
+  //     }
+
+  //     .table-3 {
+  //       tr {
+  //         border: 1px solid $yellow !important;
+  //       }
+  //     }
+
+  //     .table {
+  //       thead {
+  //         border-radius: 10px 10px 0 0;
+  //         display: flex;
+  //         overflow: hidden;
+  //         text-align: center;
+  //         justify-content: center;
+  //       }
+  //     }
+  //   }
+  // }
 }
