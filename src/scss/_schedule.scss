@@ -1,6 +1,21 @@
 #schedule {
   background-color: $pink-light;
 
+  .speaker {
+    &-type {
+      font-weight: bold;
+      font-size: $font-size-small;
+      text-transform: uppercase;
+      color: $yellow;
+    }
+
+    &-profile {
+      font-size: $font-size-small;
+      color: $blue-dark;
+      font-weight: bold;
+    }
+  }
+
   #scheduleTable {
     border-radius: 10px;
     overflow: hidden;
@@ -24,10 +39,10 @@
         font-size: 18px;
         padding: 20px;
         background-color: $white;
-        white-space: nowrap;
 
         &:first-child {
           font-weight: bold;
+          white-space: nowrap;
         }
 
         &:last-child {
